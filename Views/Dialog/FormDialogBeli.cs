@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SIKOPI_DOPY_ROASTERY.Views
+namespace SIKOPI_DOPY_ROASTERY.Views.Dialog
 {
-    public partial class FormLogin : Form
+    public partial class FormDialogBeli : Form
     {
-        public FormLogin()
+        public FormDialogBeli()
         {
             InitializeComponent();
         }

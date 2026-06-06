@@ -6,11 +6,11 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SIKOPI_DOPY_ROASTERY.Views
+namespace SIKOPI_DOPY_ROASTERY.Views.Admin
 {
-    public partial class FormLogin : Form
+    public partial class FormManajemenUser : Form
     {
-        public FormLogin()
+        public FormManajemenUser()
         {
             InitializeComponent();
         }
