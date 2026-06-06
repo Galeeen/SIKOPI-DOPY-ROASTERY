@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SIKOPI_DOPY_ROASTERY.Repositories
 {
-    internal interface IRepositori
+    internal class RepositoriRoastBatch
     {
     }
 }
