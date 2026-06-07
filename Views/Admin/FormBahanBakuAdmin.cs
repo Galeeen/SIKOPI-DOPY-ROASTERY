@@ -19,5 +19,10 @@ namespace SIKOPI_DOPY_ROASTERY.Views.Admin
         {
 
         }
+
+        private void btnSetHargaAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
