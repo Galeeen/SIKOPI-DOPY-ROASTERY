@@ -4,7 +4,12 @@ using System.Text;
 
 namespace SIKOPI_DOPY_ROASTERY.Models
 {
-    internal class User
+    public class User
     {
+        public long Id { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }   // plaintext, disimpan di kolom kata_sandi_hash (tanpa hash, sesuai materi)
+        public string Nama { get; set; }
+        public string Peran { get; set; }   // "admin" | "produksi" | "penjualan"
     }
 }
