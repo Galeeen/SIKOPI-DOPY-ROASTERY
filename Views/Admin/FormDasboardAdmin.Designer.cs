@@ -36,38 +36,43 @@
             // lblKartu1Admin
             // 
             lblKartu1Admin.AutoSize = true;
-            lblKartu1Admin.Location = new Point(125, 195);
+            lblKartu1Admin.Location = new Point(156, 244);
+            lblKartu1Admin.Margin = new Padding(4, 0, 4, 0);
             lblKartu1Admin.Name = "lblKartu1Admin";
-            lblKartu1Admin.Size = new Size(50, 20);
+            lblKartu1Admin.Size = new Size(59, 25);
             lblKartu1Admin.TabIndex = 0;
             lblKartu1Admin.Text = "label1";
             // 
             // lblKartu2Admin
             // 
             lblKartu2Admin.AutoSize = true;
-            lblKartu2Admin.Location = new Point(246, 196);
+            lblKartu2Admin.Location = new Point(308, 245);
+            lblKartu2Admin.Margin = new Padding(4, 0, 4, 0);
             lblKartu2Admin.Name = "lblKartu2Admin";
-            lblKartu2Admin.Size = new Size(50, 20);
+            lblKartu2Admin.Size = new Size(59, 25);
             lblKartu2Admin.TabIndex = 1;
             lblKartu2Admin.Text = "label2";
             // 
             // lblKartu3Admin
             // 
             lblKartu3Admin.AutoSize = true;
-            lblKartu3Admin.Location = new Point(358, 198);
+            lblKartu3Admin.Location = new Point(448, 248);
+            lblKartu3Admin.Margin = new Padding(4, 0, 4, 0);
             lblKartu3Admin.Name = "lblKartu3Admin";
-            lblKartu3Admin.Size = new Size(50, 20);
+            lblKartu3Admin.Size = new Size(59, 25);
             lblKartu3Admin.TabIndex = 2;
             lblKartu3Admin.Text = "label3";
             // 
             // FormDasboardAdmin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1920, 1080);
             Controls.Add(lblKartu3Admin);
             Controls.Add(lblKartu2Admin);
             Controls.Add(lblKartu1Admin);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "FormDasboardAdmin";
             Text = "FormDasboardAdmin";
             ResumeLayout(false);

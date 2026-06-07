@@ -148,19 +148,19 @@
             btnSetHargaAdmin.TabIndex = 5;
             btnSetHargaAdmin.Text = "button4";
             btnSetHargaAdmin.UseVisualStyleBackColor = true;
-            btnSetHargaAdmin.Click += btnSetHargaAdmin_Click;
             // 
             // FormBahanBakuAdmin
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1000, 562);
+            ClientSize = new Size(1920, 1080);
             Controls.Add(btnSetHargaAdmin);
             Controls.Add(btnHapusGreenAdmin);
             Controls.Add(btnEditGreenAdmin);
             Controls.Add(btnTambahGreenAdmin);
             Controls.Add(txtCariAdmin);
             Controls.Add(tabBahanAdmin);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 4, 4, 4);
             Name = "FormBahanBakuAdmin";
             Text = "FormBahanBakuAdmin";

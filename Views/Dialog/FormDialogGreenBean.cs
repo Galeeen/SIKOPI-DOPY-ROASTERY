@@ -8,16 +8,11 @@ using System.Windows.Forms;
 
 namespace SIKOPI_DOPY_ROASTERY.Views.Dialog
 {
-    public partial class FormDialogSeHarga : Form
+    public partial class FormDialogGreenBean : Form
     {
-        public FormDialogSeHarga()
+        public FormDialogGreenBean()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

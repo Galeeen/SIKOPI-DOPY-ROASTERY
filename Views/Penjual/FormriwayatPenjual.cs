@@ -6,18 +6,13 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SIKOPI_DOPY_ROASTERY.Views.Dialog
+namespace SIKOPI_DOPY_ROASTERY.Views.Penjual
 {
-    public partial class FormDialogSeHarga : Form
+    public partial class FormriwayatPenjual : Form
     {
-        public FormDialogSeHarga()
+        public FormriwayatPenjual()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
