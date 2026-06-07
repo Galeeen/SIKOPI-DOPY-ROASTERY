@@ -60,10 +60,13 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1902, 1033);
+            BackgroundImage = Properties.Resources.bg;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1536, 864);
             Controls.Add(btnMasuk);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
+            DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormLogin";
             Text = "FormLogin";

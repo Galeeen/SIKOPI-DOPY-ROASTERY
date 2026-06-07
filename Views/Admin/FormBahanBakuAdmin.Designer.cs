@@ -30,8 +30,8 @@
         {
             tabBahanAdmin = new TabControl();
             tabGreenAdmin = new TabPage();
-            tabRoastAdmin = new TabPage();
             dgvGreenAdmin = new DataGridView();
+            tabRoastAdmin = new TabPage();
             dgvRoastAdmin = new DataGridView();
             txtCariAdmin = new TextBox();
             btnTambahGreenAdmin = new Button();
@@ -40,8 +40,8 @@
             btnSetHargaAdmin = new Button();
             tabBahanAdmin.SuspendLayout();
             tabGreenAdmin.SuspendLayout();
-            tabRoastAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvGreenAdmin).BeginInit();
+            tabRoastAdmin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvRoastAdmin).BeginInit();
             SuspendLayout();
             // 
@@ -49,113 +49,125 @@
             // 
             tabBahanAdmin.Controls.Add(tabGreenAdmin);
             tabBahanAdmin.Controls.Add(tabRoastAdmin);
-            tabBahanAdmin.Location = new Point(71, 58);
+            tabBahanAdmin.Location = new Point(89, 72);
+            tabBahanAdmin.Margin = new Padding(4, 4, 4, 4);
             tabBahanAdmin.Name = "tabBahanAdmin";
             tabBahanAdmin.SelectedIndex = 0;
-            tabBahanAdmin.Size = new Size(649, 293);
+            tabBahanAdmin.Size = new Size(811, 366);
             tabBahanAdmin.TabIndex = 0;
             // 
             // tabGreenAdmin
             // 
             tabGreenAdmin.Controls.Add(dgvGreenAdmin);
-            tabGreenAdmin.Location = new Point(4, 29);
+            tabGreenAdmin.Location = new Point(4, 34);
+            tabGreenAdmin.Margin = new Padding(4, 4, 4, 4);
             tabGreenAdmin.Name = "tabGreenAdmin";
-            tabGreenAdmin.Padding = new Padding(3);
-            tabGreenAdmin.Size = new Size(641, 260);
+            tabGreenAdmin.Padding = new Padding(4, 4, 4, 4);
+            tabGreenAdmin.Size = new Size(803, 328);
             tabGreenAdmin.TabIndex = 0;
             tabGreenAdmin.Text = "tabPage1";
             tabGreenAdmin.UseVisualStyleBackColor = true;
             // 
+            // dgvGreenAdmin
+            // 
+            dgvGreenAdmin.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvGreenAdmin.Location = new Point(8, 45);
+            dgvGreenAdmin.Margin = new Padding(4, 4, 4, 4);
+            dgvGreenAdmin.Name = "dgvGreenAdmin";
+            dgvGreenAdmin.RowHeadersWidth = 51;
+            dgvGreenAdmin.Size = new Size(786, 235);
+            dgvGreenAdmin.TabIndex = 0;
+            // 
             // tabRoastAdmin
             // 
             tabRoastAdmin.Controls.Add(dgvRoastAdmin);
-            tabRoastAdmin.Location = new Point(4, 29);
+            tabRoastAdmin.Location = new Point(4, 34);
+            tabRoastAdmin.Margin = new Padding(4, 4, 4, 4);
             tabRoastAdmin.Name = "tabRoastAdmin";
-            tabRoastAdmin.Padding = new Padding(3);
-            tabRoastAdmin.Size = new Size(641, 260);
+            tabRoastAdmin.Padding = new Padding(4, 4, 4, 4);
+            tabRoastAdmin.Size = new Size(803, 328);
             tabRoastAdmin.TabIndex = 1;
             tabRoastAdmin.Text = "tabPage2";
             tabRoastAdmin.UseVisualStyleBackColor = true;
             // 
-            // dgvGreenAdmin
-            // 
-            dgvGreenAdmin.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvGreenAdmin.Location = new Point(6, 36);
-            dgvGreenAdmin.Name = "dgvGreenAdmin";
-            dgvGreenAdmin.RowHeadersWidth = 51;
-            dgvGreenAdmin.Size = new Size(629, 188);
-            dgvGreenAdmin.TabIndex = 0;
-            // 
             // dgvRoastAdmin
             // 
             dgvRoastAdmin.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvRoastAdmin.Location = new Point(23, 45);
+            dgvRoastAdmin.Location = new Point(29, 56);
+            dgvRoastAdmin.Margin = new Padding(4, 4, 4, 4);
             dgvRoastAdmin.Name = "dgvRoastAdmin";
             dgvRoastAdmin.RowHeadersWidth = 51;
-            dgvRoastAdmin.Size = new Size(612, 188);
+            dgvRoastAdmin.Size = new Size(765, 235);
             dgvRoastAdmin.TabIndex = 0;
             dgvRoastAdmin.CellContentClick += dgvRoastAdmin_CellContentClick;
             // 
             // txtCariAdmin
             // 
-            txtCariAdmin.Location = new Point(84, 357);
+            txtCariAdmin.Location = new Point(105, 446);
+            txtCariAdmin.Margin = new Padding(4, 4, 4, 4);
             txtCariAdmin.Name = "txtCariAdmin";
-            txtCariAdmin.Size = new Size(308, 27);
+            txtCariAdmin.Size = new Size(384, 31);
             txtCariAdmin.TabIndex = 1;
             // 
             // btnTambahGreenAdmin
             // 
-            btnTambahGreenAdmin.Location = new Point(84, 409);
+            btnTambahGreenAdmin.Location = new Point(105, 511);
+            btnTambahGreenAdmin.Margin = new Padding(4, 4, 4, 4);
             btnTambahGreenAdmin.Name = "btnTambahGreenAdmin";
-            btnTambahGreenAdmin.Size = new Size(94, 29);
+            btnTambahGreenAdmin.Size = new Size(118, 36);
             btnTambahGreenAdmin.TabIndex = 2;
             btnTambahGreenAdmin.Text = "button1";
             btnTambahGreenAdmin.UseVisualStyleBackColor = true;
             // 
             // btnEditGreenAdmin
             // 
-            btnEditGreenAdmin.Location = new Point(195, 409);
+            btnEditGreenAdmin.Location = new Point(244, 511);
+            btnEditGreenAdmin.Margin = new Padding(4, 4, 4, 4);
             btnEditGreenAdmin.Name = "btnEditGreenAdmin";
-            btnEditGreenAdmin.Size = new Size(94, 29);
+            btnEditGreenAdmin.Size = new Size(118, 36);
             btnEditGreenAdmin.TabIndex = 3;
             btnEditGreenAdmin.Text = "button2";
             btnEditGreenAdmin.UseVisualStyleBackColor = true;
             // 
             // btnHapusGreenAdmin
             // 
-            btnHapusGreenAdmin.Location = new Point(298, 409);
+            btnHapusGreenAdmin.Location = new Point(372, 511);
+            btnHapusGreenAdmin.Margin = new Padding(4, 4, 4, 4);
             btnHapusGreenAdmin.Name = "btnHapusGreenAdmin";
-            btnHapusGreenAdmin.Size = new Size(94, 29);
+            btnHapusGreenAdmin.Size = new Size(118, 36);
             btnHapusGreenAdmin.TabIndex = 4;
             btnHapusGreenAdmin.Text = "button3";
             btnHapusGreenAdmin.UseVisualStyleBackColor = true;
             // 
             // btnSetHargaAdmin
             // 
-            btnSetHargaAdmin.Location = new Point(416, 409);
+            btnSetHargaAdmin.Location = new Point(520, 511);
+            btnSetHargaAdmin.Margin = new Padding(4, 4, 4, 4);
             btnSetHargaAdmin.Name = "btnSetHargaAdmin";
-            btnSetHargaAdmin.Size = new Size(94, 29);
+            btnSetHargaAdmin.Size = new Size(118, 36);
             btnSetHargaAdmin.TabIndex = 5;
             btnSetHargaAdmin.Text = "button4";
             btnSetHargaAdmin.UseVisualStyleBackColor = true;
             // 
             // FormBahanBakuAdmin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1920, 1080);
             Controls.Add(btnSetHargaAdmin);
             Controls.Add(btnHapusGreenAdmin);
             Controls.Add(btnEditGreenAdmin);
             Controls.Add(btnTambahGreenAdmin);
             Controls.Add(txtCariAdmin);
             Controls.Add(tabBahanAdmin);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "FormBahanBakuAdmin";
             Text = "FormBahanBakuAdmin";
             tabBahanAdmin.ResumeLayout(false);
             tabGreenAdmin.ResumeLayout(false);
-            tabRoastAdmin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvGreenAdmin).EndInit();
+            tabRoastAdmin.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvRoastAdmin).EndInit();
             ResumeLayout(false);
             PerformLayout();

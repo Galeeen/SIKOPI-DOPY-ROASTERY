@@ -39,56 +39,63 @@
             // dgvUserAdmin
             // 
             dgvUserAdmin.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvUserAdmin.Location = new Point(53, 100);
+            dgvUserAdmin.Location = new Point(66, 125);
+            dgvUserAdmin.Margin = new Padding(4, 4, 4, 4);
             dgvUserAdmin.Name = "dgvUserAdmin";
             dgvUserAdmin.RowHeadersWidth = 51;
-            dgvUserAdmin.Size = new Size(684, 175);
+            dgvUserAdmin.Size = new Size(855, 219);
             dgvUserAdmin.TabIndex = 0;
             // 
             // txtCariAdmin
             // 
-            txtCariAdmin.Location = new Point(207, 27);
+            txtCariAdmin.Location = new Point(259, 34);
+            txtCariAdmin.Margin = new Padding(4, 4, 4, 4);
             txtCariAdmin.Name = "txtCariAdmin";
-            txtCariAdmin.Size = new Size(125, 27);
+            txtCariAdmin.Size = new Size(155, 31);
             txtCariAdmin.TabIndex = 1;
             // 
             // btnTambahUserAdmin
             // 
-            btnTambahUserAdmin.Location = new Point(102, 297);
+            btnTambahUserAdmin.Location = new Point(128, 371);
+            btnTambahUserAdmin.Margin = new Padding(4, 4, 4, 4);
             btnTambahUserAdmin.Name = "btnTambahUserAdmin";
-            btnTambahUserAdmin.Size = new Size(94, 29);
+            btnTambahUserAdmin.Size = new Size(118, 36);
             btnTambahUserAdmin.TabIndex = 2;
             btnTambahUserAdmin.Text = "button1";
             btnTambahUserAdmin.UseVisualStyleBackColor = true;
             // 
             // btnEditUserAdmin
             // 
-            btnEditUserAdmin.Location = new Point(216, 297);
+            btnEditUserAdmin.Location = new Point(270, 371);
+            btnEditUserAdmin.Margin = new Padding(4, 4, 4, 4);
             btnEditUserAdmin.Name = "btnEditUserAdmin";
-            btnEditUserAdmin.Size = new Size(94, 29);
+            btnEditUserAdmin.Size = new Size(118, 36);
             btnEditUserAdmin.TabIndex = 3;
             btnEditUserAdmin.Text = "button2";
             btnEditUserAdmin.UseVisualStyleBackColor = true;
             // 
             // btnHapusUserAdmin
             // 
-            btnHapusUserAdmin.Location = new Point(326, 297);
+            btnHapusUserAdmin.Location = new Point(408, 371);
+            btnHapusUserAdmin.Margin = new Padding(4, 4, 4, 4);
             btnHapusUserAdmin.Name = "btnHapusUserAdmin";
-            btnHapusUserAdmin.Size = new Size(94, 29);
+            btnHapusUserAdmin.Size = new Size(118, 36);
             btnHapusUserAdmin.TabIndex = 4;
             btnHapusUserAdmin.Text = "button3";
             btnHapusUserAdmin.UseVisualStyleBackColor = true;
             // 
             // FormManajemenUser
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1898, 1024);
             Controls.Add(btnHapusUserAdmin);
             Controls.Add(btnEditUserAdmin);
             Controls.Add(btnTambahUserAdmin);
             Controls.Add(txtCariAdmin);
             Controls.Add(dgvUserAdmin);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "FormManajemenUser";
             Text = "FormManajemenUser";
             ((System.ComponentModel.ISupportInitialize)dgvUserAdmin).EndInit();

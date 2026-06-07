@@ -31,10 +31,10 @@
             components = new System.ComponentModel.Container();
             tabRiwayatAdmin = new TabControl();
             tabPergerakanStokAdmin = new TabPage();
-            cmbArahAdmin = new ComboBox();
             dgvPergerakanAdmin = new DataGridView();
             tabTransaksiAdmin = new TabPage();
             dgvTransaksiAdmin = new DataGridView();
+            cmbArahAdmin = new ComboBox();
             cmbKategoriAdmin = new ComboBox();
             contextMenuStrip1 = new ContextMenuStrip(components);
             txtCariAdmin = new TextBox();
@@ -49,49 +49,45 @@
             // 
             tabRiwayatAdmin.Controls.Add(tabPergerakanStokAdmin);
             tabRiwayatAdmin.Controls.Add(tabTransaksiAdmin);
-            tabRiwayatAdmin.Location = new Point(55, 58);
+            tabRiwayatAdmin.Location = new Point(69, 72);
+            tabRiwayatAdmin.Margin = new Padding(4, 4, 4, 4);
             tabRiwayatAdmin.Name = "tabRiwayatAdmin";
             tabRiwayatAdmin.SelectedIndex = 0;
-            tabRiwayatAdmin.Size = new Size(570, 332);
+            tabRiwayatAdmin.Size = new Size(712, 415);
             tabRiwayatAdmin.TabIndex = 0;
             tabRiwayatAdmin.SelectedIndexChanged += tabRiwayatAdmin_SelectedIndexChanged;
             // 
             // tabPergerakanStokAdmin
             // 
             tabPergerakanStokAdmin.Controls.Add(dgvPergerakanAdmin);
-            tabPergerakanStokAdmin.Location = new Point(4, 29);
+            tabPergerakanStokAdmin.Location = new Point(4, 34);
+            tabPergerakanStokAdmin.Margin = new Padding(4, 4, 4, 4);
             tabPergerakanStokAdmin.Name = "tabPergerakanStokAdmin";
-            tabPergerakanStokAdmin.Padding = new Padding(3);
-            tabPergerakanStokAdmin.Size = new Size(562, 299);
+            tabPergerakanStokAdmin.Padding = new Padding(4, 4, 4, 4);
+            tabPergerakanStokAdmin.Size = new Size(704, 377);
             tabPergerakanStokAdmin.TabIndex = 0;
             tabPergerakanStokAdmin.Text = "tabPage1";
             tabPergerakanStokAdmin.UseVisualStyleBackColor = true;
             tabPergerakanStokAdmin.Click += tabPergerakanStokAdmin_Click;
             // 
-            // cmbArahAdmin
-            // 
-            cmbArahAdmin.FormattingEnabled = true;
-            cmbArahAdmin.Location = new Point(248, 30);
-            cmbArahAdmin.Name = "cmbArahAdmin";
-            cmbArahAdmin.Size = new Size(151, 28);
-            cmbArahAdmin.TabIndex = 1;
-            // 
             // dgvPergerakanAdmin
             // 
             dgvPergerakanAdmin.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPergerakanAdmin.Location = new Point(26, 112);
+            dgvPergerakanAdmin.Location = new Point(32, 140);
+            dgvPergerakanAdmin.Margin = new Padding(4, 4, 4, 4);
             dgvPergerakanAdmin.Name = "dgvPergerakanAdmin";
             dgvPergerakanAdmin.RowHeadersWidth = 51;
-            dgvPergerakanAdmin.Size = new Size(509, 167);
+            dgvPergerakanAdmin.Size = new Size(636, 209);
             dgvPergerakanAdmin.TabIndex = 0;
             // 
             // tabTransaksiAdmin
             // 
             tabTransaksiAdmin.Controls.Add(dgvTransaksiAdmin);
-            tabTransaksiAdmin.Location = new Point(4, 29);
+            tabTransaksiAdmin.Location = new Point(4, 34);
+            tabTransaksiAdmin.Margin = new Padding(4, 4, 4, 4);
             tabTransaksiAdmin.Name = "tabTransaksiAdmin";
-            tabTransaksiAdmin.Padding = new Padding(3);
-            tabTransaksiAdmin.Size = new Size(562, 329);
+            tabTransaksiAdmin.Padding = new Padding(4, 4, 4, 4);
+            tabTransaksiAdmin.Size = new Size(704, 377);
             tabTransaksiAdmin.TabIndex = 1;
             tabTransaksiAdmin.Text = "tabPage2";
             tabTransaksiAdmin.UseVisualStyleBackColor = true;
@@ -99,18 +95,29 @@
             // dgvTransaksiAdmin
             // 
             dgvTransaksiAdmin.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTransaksiAdmin.Location = new Point(17, 26);
+            dgvTransaksiAdmin.Location = new Point(21, 32);
+            dgvTransaksiAdmin.Margin = new Padding(4, 4, 4, 4);
             dgvTransaksiAdmin.Name = "dgvTransaksiAdmin";
             dgvTransaksiAdmin.RowHeadersWidth = 51;
-            dgvTransaksiAdmin.Size = new Size(539, 177);
+            dgvTransaksiAdmin.Size = new Size(674, 221);
             dgvTransaksiAdmin.TabIndex = 0;
+            // 
+            // cmbArahAdmin
+            // 
+            cmbArahAdmin.FormattingEnabled = true;
+            cmbArahAdmin.Location = new Point(310, 38);
+            cmbArahAdmin.Margin = new Padding(4, 4, 4, 4);
+            cmbArahAdmin.Name = "cmbArahAdmin";
+            cmbArahAdmin.Size = new Size(188, 33);
+            cmbArahAdmin.TabIndex = 1;
             // 
             // cmbKategoriAdmin
             // 
             cmbKategoriAdmin.FormattingEnabled = true;
-            cmbKategoriAdmin.Location = new Point(425, 30);
+            cmbKategoriAdmin.Location = new Point(531, 38);
+            cmbKategoriAdmin.Margin = new Padding(4, 4, 4, 4);
             cmbKategoriAdmin.Name = "cmbKategoriAdmin";
-            cmbKategoriAdmin.Size = new Size(151, 28);
+            cmbKategoriAdmin.Size = new Size(188, 33);
             cmbKategoriAdmin.TabIndex = 2;
             // 
             // contextMenuStrip1
@@ -121,20 +128,23 @@
             // 
             // txtCariAdmin
             // 
-            txtCariAdmin.Location = new Point(605, 30);
+            txtCariAdmin.Location = new Point(756, 38);
+            txtCariAdmin.Margin = new Padding(4, 4, 4, 4);
             txtCariAdmin.Name = "txtCariAdmin";
-            txtCariAdmin.Size = new Size(125, 27);
+            txtCariAdmin.Size = new Size(155, 31);
             txtCariAdmin.TabIndex = 4;
             // 
             // FormRiwayatAdmin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1898, 1024);
             Controls.Add(txtCariAdmin);
             Controls.Add(cmbKategoriAdmin);
             Controls.Add(cmbArahAdmin);
             Controls.Add(tabRiwayatAdmin);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "FormRiwayatAdmin";
             Text = "FormRiwayatAdmin";
             tabRiwayatAdmin.ResumeLayout(false);

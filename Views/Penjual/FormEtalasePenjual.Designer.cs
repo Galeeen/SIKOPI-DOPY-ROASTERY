@@ -36,37 +36,42 @@
             // 
             // btnBeliPenjual
             // 
-            btnBeliPenjual.Location = new Point(152, 347);
+            btnBeliPenjual.Location = new Point(190, 434);
+            btnBeliPenjual.Margin = new Padding(4, 4, 4, 4);
             btnBeliPenjual.Name = "btnBeliPenjual";
-            btnBeliPenjual.Size = new Size(94, 29);
+            btnBeliPenjual.Size = new Size(118, 36);
             btnBeliPenjual.TabIndex = 5;
             btnBeliPenjual.Text = "button1";
             btnBeliPenjual.UseVisualStyleBackColor = true;
             // 
             // txtCariPenjual
             // 
-            txtCariPenjual.Location = new Point(159, 75);
+            txtCariPenjual.Location = new Point(199, 94);
+            txtCariPenjual.Margin = new Padding(4, 4, 4, 4);
             txtCariPenjual.Name = "txtCariPenjual";
-            txtCariPenjual.Size = new Size(125, 27);
+            txtCariPenjual.Size = new Size(155, 31);
             txtCariPenjual.TabIndex = 4;
             // 
             // dgvProdukPenjual
             // 
             dgvProdukPenjual.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProdukPenjual.Location = new Point(111, 130);
+            dgvProdukPenjual.Location = new Point(139, 162);
+            dgvProdukPenjual.Margin = new Padding(4, 4, 4, 4);
             dgvProdukPenjual.Name = "dgvProdukPenjual";
             dgvProdukPenjual.RowHeadersWidth = 51;
-            dgvProdukPenjual.Size = new Size(579, 188);
+            dgvProdukPenjual.Size = new Size(724, 235);
             dgvProdukPenjual.TabIndex = 3;
             // 
             // FormEtalasePenjual
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1920, 1080);
             Controls.Add(btnBeliPenjual);
             Controls.Add(txtCariPenjual);
             Controls.Add(dgvProdukPenjual);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "FormEtalasePenjual";
             Text = "FormEtalasePenjual";
             ((System.ComponentModel.ISupportInitialize)dgvProdukPenjual).EndInit();

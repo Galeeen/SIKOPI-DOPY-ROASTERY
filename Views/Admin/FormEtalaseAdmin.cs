@@ -14,5 +14,10 @@ namespace SIKOPI_DOPY_ROASTERY.Views.Admin
         {
             InitializeComponent();
         }
+
+        private void FormEtalaseAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

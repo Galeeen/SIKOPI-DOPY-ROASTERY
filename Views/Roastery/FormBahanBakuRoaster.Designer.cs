@@ -43,28 +43,31 @@
             // 
             // txtCariAdmin
             // 
-            txtCariAdmin.Location = new Point(55, 351);
+            txtCariAdmin.Location = new Point(69, 439);
+            txtCariAdmin.Margin = new Padding(4, 4, 4, 4);
             txtCariAdmin.Name = "txtCariAdmin";
-            txtCariAdmin.Size = new Size(308, 27);
+            txtCariAdmin.Size = new Size(384, 31);
             txtCariAdmin.TabIndex = 3;
             // 
             // tabBahanRoaster
             // 
             tabBahanRoaster.Controls.Add(tabGreenRoaster);
             tabBahanRoaster.Controls.Add(tabRoastRoaster);
-            tabBahanRoaster.Location = new Point(55, 36);
+            tabBahanRoaster.Location = new Point(69, 45);
+            tabBahanRoaster.Margin = new Padding(4, 4, 4, 4);
             tabBahanRoaster.Name = "tabBahanRoaster";
             tabBahanRoaster.SelectedIndex = 0;
-            tabBahanRoaster.Size = new Size(649, 293);
+            tabBahanRoaster.Size = new Size(811, 366);
             tabBahanRoaster.TabIndex = 2;
             // 
             // tabGreenRoaster
             // 
             tabGreenRoaster.Controls.Add(dgvGreenAdmin);
-            tabGreenRoaster.Location = new Point(4, 29);
+            tabGreenRoaster.Location = new Point(4, 34);
+            tabGreenRoaster.Margin = new Padding(4, 4, 4, 4);
             tabGreenRoaster.Name = "tabGreenRoaster";
-            tabGreenRoaster.Padding = new Padding(3);
-            tabGreenRoaster.Size = new Size(641, 260);
+            tabGreenRoaster.Padding = new Padding(4, 4, 4, 4);
+            tabGreenRoaster.Size = new Size(803, 328);
             tabGreenRoaster.TabIndex = 0;
             tabGreenRoaster.Text = "tabPage1";
             tabGreenRoaster.UseVisualStyleBackColor = true;
@@ -72,19 +75,21 @@
             // dgvGreenAdmin
             // 
             dgvGreenAdmin.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvGreenAdmin.Location = new Point(6, 36);
+            dgvGreenAdmin.Location = new Point(8, 45);
+            dgvGreenAdmin.Margin = new Padding(4, 4, 4, 4);
             dgvGreenAdmin.Name = "dgvGreenAdmin";
             dgvGreenAdmin.RowHeadersWidth = 51;
-            dgvGreenAdmin.Size = new Size(629, 188);
+            dgvGreenAdmin.Size = new Size(786, 235);
             dgvGreenAdmin.TabIndex = 0;
             // 
             // tabRoastRoaster
             // 
             tabRoastRoaster.Controls.Add(dgvRoastRoaster);
-            tabRoastRoaster.Location = new Point(4, 29);
+            tabRoastRoaster.Location = new Point(4, 34);
+            tabRoastRoaster.Margin = new Padding(4, 4, 4, 4);
             tabRoastRoaster.Name = "tabRoastRoaster";
-            tabRoastRoaster.Padding = new Padding(3);
-            tabRoastRoaster.Size = new Size(641, 260);
+            tabRoastRoaster.Padding = new Padding(4, 4, 4, 4);
+            tabRoastRoaster.Size = new Size(803, 328);
             tabRoastRoaster.TabIndex = 1;
             tabRoastRoaster.Text = "tabPage2";
             tabRoastRoaster.UseVisualStyleBackColor = true;
@@ -92,19 +97,22 @@
             // dgvRoastRoaster
             // 
             dgvRoastRoaster.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvRoastRoaster.Location = new Point(23, 45);
+            dgvRoastRoaster.Location = new Point(29, 56);
+            dgvRoastRoaster.Margin = new Padding(4, 4, 4, 4);
             dgvRoastRoaster.Name = "dgvRoastRoaster";
             dgvRoastRoaster.RowHeadersWidth = 51;
-            dgvRoastRoaster.Size = new Size(612, 188);
+            dgvRoastRoaster.Size = new Size(765, 235);
             dgvRoastRoaster.TabIndex = 0;
             // 
             // FormBahanBakuRoaster
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1898, 1024);
             Controls.Add(txtCariAdmin);
             Controls.Add(tabBahanRoaster);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "FormBahanBakuRoaster";
             Text = "FormBahanBakuRoaster";
             tabBahanRoaster.ResumeLayout(false);

@@ -36,25 +36,28 @@
             // 
             // numHargaAdmin
             // 
-            numHargaAdmin.Location = new Point(114, 94);
+            numHargaAdmin.Location = new Point(142, 118);
+            numHargaAdmin.Margin = new Padding(4, 4, 4, 4);
             numHargaAdmin.Name = "numHargaAdmin";
-            numHargaAdmin.Size = new Size(150, 27);
+            numHargaAdmin.Size = new Size(188, 31);
             numHargaAdmin.TabIndex = 0;
             // 
             // btnSimpanAdmin
             // 
-            btnSimpanAdmin.Location = new Point(114, 177);
+            btnSimpanAdmin.Location = new Point(142, 221);
+            btnSimpanAdmin.Margin = new Padding(4, 4, 4, 4);
             btnSimpanAdmin.Name = "btnSimpanAdmin";
-            btnSimpanAdmin.Size = new Size(94, 29);
+            btnSimpanAdmin.Size = new Size(118, 36);
             btnSimpanAdmin.TabIndex = 1;
             btnSimpanAdmin.Text = "button1";
             btnSimpanAdmin.UseVisualStyleBackColor = true;
             // 
             // btnBatalAdmin
             // 
-            btnBatalAdmin.Location = new Point(243, 177);
+            btnBatalAdmin.Location = new Point(304, 221);
+            btnBatalAdmin.Margin = new Padding(4, 4, 4, 4);
             btnBatalAdmin.Name = "btnBatalAdmin";
-            btnBatalAdmin.Size = new Size(94, 29);
+            btnBatalAdmin.Size = new Size(118, 36);
             btnBatalAdmin.TabIndex = 2;
             btnBatalAdmin.Text = "button2";
             btnBatalAdmin.UseVisualStyleBackColor = true;
@@ -62,12 +65,14 @@
             // 
             // FormDialogSeHarga
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1920, 1080);
             Controls.Add(btnBatalAdmin);
             Controls.Add(btnSimpanAdmin);
             Controls.Add(numHargaAdmin);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "FormDialogSeHarga";
             Text = "FormDialogSeHarga";
             ((System.ComponentModel.ISupportInitialize)numHargaAdmin).EndInit();
