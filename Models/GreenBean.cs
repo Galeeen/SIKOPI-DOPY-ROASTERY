@@ -4,7 +4,35 @@ using System.Text;
 
 namespace SIKOPI_DOPY_ROASTERY.Models
 {
-    internal class GreenBean
+    public class GreenBean : Bahan   // <- mewarisi Bahan (Id, Nama, kontrak DapatkanLabelStok)
     {
+        public string Asal { get; set; }
+        public string Tipe { get; set; } = "Arabika";
+
+        // ENKAPSULASI: stok tidak boleh negatif (aturan bisnis #5 di spec)
+        private decimal _stokKg;
+        public decimal StokKg
+        {
+            get => _stokKg;
+            set
+            {
+                if (value < 0) throw new ArgumentException("Stok Kg tidak boleh negatif");
+                _stokKg = value;
+            }
+        }
+
+        private decimal _hargaPerKg;
+        public decimal HargaPerKg
+        {
+            get => _hargaPerKg;
+            set
+            {
+                if (value < 0) throw new ArgumentException("Harga tidak boleh negatif");
+                _hargaPerKg = value;
+            }
+        }
+
+        // POLYMORPHISM (overriding): GreenBean menampilkan stok dalam Kg
+        public override string DapatkanLabelStok() => $"{StokKg:N2} Kg";
     }
 }
