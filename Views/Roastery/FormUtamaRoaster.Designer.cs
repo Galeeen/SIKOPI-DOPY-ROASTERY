@@ -28,12 +28,102 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormUtamaRoaster";
+            lblSelamatDatangRoaster = new Label();
+            panelKontenRoaster = new Panel();
+            btnKeluarRoaster = new Button();
+            btnRiwayatRoaster = new Button();
+            btnRoastingRoaster = new Button();
+            btnBahanBakuRoaster = new Button();
+            btnDasboardRoaster = new Button();
+            SuspendLayout();
+            // 
+            // lblSelamatDatangRoaster
+            // 
+            lblSelamatDatangRoaster.AutoSize = true;
+            lblSelamatDatangRoaster.Location = new Point(296, 18);
+            lblSelamatDatangRoaster.Name = "lblSelamatDatangRoaster";
+            lblSelamatDatangRoaster.Size = new Size(50, 20);
+            lblSelamatDatangRoaster.TabIndex = 26;
+            lblSelamatDatangRoaster.Text = "label1";
+            // 
+            // panelKontenRoaster
+            // 
+            panelKontenRoaster.Location = new Point(12, 274);
+            panelKontenRoaster.Name = "panelKontenRoaster";
+            panelKontenRoaster.Size = new Size(250, 125);
+            panelKontenRoaster.TabIndex = 25;
+            // 
+            // btnKeluarRoaster
+            // 
+            btnKeluarRoaster.Location = new Point(12, 222);
+            btnKeluarRoaster.Name = "btnKeluarRoaster";
+            btnKeluarRoaster.Size = new Size(94, 29);
+            btnKeluarRoaster.TabIndex = 24;
+            btnKeluarRoaster.Text = "button7";
+            btnKeluarRoaster.UseVisualStyleBackColor = true;
+            // 
+            // btnRiwayatRoaster
+            // 
+            btnRiwayatRoaster.Location = new Point(12, 187);
+            btnRiwayatRoaster.Name = "btnRiwayatRoaster";
+            btnRiwayatRoaster.Size = new Size(94, 29);
+            btnRiwayatRoaster.TabIndex = 22;
+            btnRiwayatRoaster.Text = "button5";
+            btnRiwayatRoaster.UseVisualStyleBackColor = true;
+            // 
+            // btnRoastingRoaster
+            // 
+            btnRoastingRoaster.Location = new Point(12, 82);
+            btnRoastingRoaster.Name = "btnRoastingRoaster";
+            btnRoastingRoaster.Size = new Size(94, 29);
+            btnRoastingRoaster.TabIndex = 20;
+            btnRoastingRoaster.Text = "button3";
+            btnRoastingRoaster.UseVisualStyleBackColor = true;
+            // 
+            // btnBahanBakuRoaster
+            // 
+            btnBahanBakuRoaster.Location = new Point(12, 47);
+            btnBahanBakuRoaster.Name = "btnBahanBakuRoaster";
+            btnBahanBakuRoaster.Size = new Size(94, 29);
+            btnBahanBakuRoaster.TabIndex = 19;
+            btnBahanBakuRoaster.Text = "button2";
+            btnBahanBakuRoaster.UseVisualStyleBackColor = true;
+            // 
+            // btnDasboardRoaster
+            // 
+            btnDasboardRoaster.Location = new Point(12, 12);
+            btnDasboardRoaster.Name = "btnDasboardRoaster";
+            btnDasboardRoaster.Size = new Size(94, 29);
+            btnDasboardRoaster.TabIndex = 18;
+            btnDasboardRoaster.Text = "button1";
+            btnDasboardRoaster.UseVisualStyleBackColor = true;
+            // 
+            // FormUtamaRoaster
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(lblSelamatDatangRoaster);
+            Controls.Add(panelKontenRoaster);
+            Controls.Add(btnKeluarRoaster);
+            Controls.Add(btnRiwayatRoaster);
+            Controls.Add(btnRoastingRoaster);
+            Controls.Add(btnBahanBakuRoaster);
+            Controls.Add(btnDasboardRoaster);
+            Name = "FormUtamaRoaster";
+            Text = "FormUtamaRoaster";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lblSelamatDatangRoaster;
+        private Panel panelKontenRoaster;
+        private Button btnKeluarRoaster;
+        private Button btnRiwayatRoaster;
+        private Button btnRoastingRoaster;
+        private Button btnBahanBakuRoaster;
+        private Button btnDasboardRoaster;
     }
 }

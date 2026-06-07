@@ -28,12 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormBahanBakuRoaster";
+            txtCariAdmin = new TextBox();
+            tabBahanRoaster = new TabControl();
+            tabGreenRoaster = new TabPage();
+            dgvGreenAdmin = new DataGridView();
+            tabRoastRoaster = new TabPage();
+            dgvRoastRoaster = new DataGridView();
+            tabBahanRoaster.SuspendLayout();
+            tabGreenRoaster.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvGreenAdmin).BeginInit();
+            tabRoastRoaster.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvRoastRoaster).BeginInit();
+            SuspendLayout();
+            // 
+            // txtCariAdmin
+            // 
+            txtCariAdmin.Location = new Point(55, 351);
+            txtCariAdmin.Name = "txtCariAdmin";
+            txtCariAdmin.Size = new Size(308, 27);
+            txtCariAdmin.TabIndex = 3;
+            // 
+            // tabBahanRoaster
+            // 
+            tabBahanRoaster.Controls.Add(tabGreenRoaster);
+            tabBahanRoaster.Controls.Add(tabRoastRoaster);
+            tabBahanRoaster.Location = new Point(55, 36);
+            tabBahanRoaster.Name = "tabBahanRoaster";
+            tabBahanRoaster.SelectedIndex = 0;
+            tabBahanRoaster.Size = new Size(649, 293);
+            tabBahanRoaster.TabIndex = 2;
+            // 
+            // tabGreenRoaster
+            // 
+            tabGreenRoaster.Controls.Add(dgvGreenAdmin);
+            tabGreenRoaster.Location = new Point(4, 29);
+            tabGreenRoaster.Name = "tabGreenRoaster";
+            tabGreenRoaster.Padding = new Padding(3);
+            tabGreenRoaster.Size = new Size(641, 260);
+            tabGreenRoaster.TabIndex = 0;
+            tabGreenRoaster.Text = "tabPage1";
+            tabGreenRoaster.UseVisualStyleBackColor = true;
+            // 
+            // dgvGreenAdmin
+            // 
+            dgvGreenAdmin.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvGreenAdmin.Location = new Point(6, 36);
+            dgvGreenAdmin.Name = "dgvGreenAdmin";
+            dgvGreenAdmin.RowHeadersWidth = 51;
+            dgvGreenAdmin.Size = new Size(629, 188);
+            dgvGreenAdmin.TabIndex = 0;
+            // 
+            // tabRoastRoaster
+            // 
+            tabRoastRoaster.Controls.Add(dgvRoastRoaster);
+            tabRoastRoaster.Location = new Point(4, 29);
+            tabRoastRoaster.Name = "tabRoastRoaster";
+            tabRoastRoaster.Padding = new Padding(3);
+            tabRoastRoaster.Size = new Size(641, 260);
+            tabRoastRoaster.TabIndex = 1;
+            tabRoastRoaster.Text = "tabPage2";
+            tabRoastRoaster.UseVisualStyleBackColor = true;
+            // 
+            // dgvRoastRoaster
+            // 
+            dgvRoastRoaster.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvRoastRoaster.Location = new Point(23, 45);
+            dgvRoastRoaster.Name = "dgvRoastRoaster";
+            dgvRoastRoaster.RowHeadersWidth = 51;
+            dgvRoastRoaster.Size = new Size(612, 188);
+            dgvRoastRoaster.TabIndex = 0;
+            // 
+            // FormBahanBakuRoaster
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(txtCariAdmin);
+            Controls.Add(tabBahanRoaster);
+            Name = "FormBahanBakuRoaster";
+            Text = "FormBahanBakuRoaster";
+            tabBahanRoaster.ResumeLayout(false);
+            tabGreenRoaster.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvGreenAdmin).EndInit();
+            tabRoastRoaster.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvRoastRoaster).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private TextBox txtCariAdmin;
+        private TabControl tabBahanRoaster;
+        private TabPage tabGreenRoaster;
+        private DataGridView dgvGreenAdmin;
+        private TabPage tabRoastRoaster;
+        private DataGridView dgvRoastRoaster;
     }
 }

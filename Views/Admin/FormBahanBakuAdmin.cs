@@ -14,5 +14,10 @@ namespace SIKOPI_DOPY_ROASTERY.Views.Admin
         {
             InitializeComponent();
         }
+
+        private void dgvRoastAdmin_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -28,12 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormEtalasePenjual";
+            btnBeliPenjual = new Button();
+            txtCariPenjual = new TextBox();
+            dgvProdukPenjual = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvProdukPenjual).BeginInit();
+            SuspendLayout();
+            // 
+            // btnBeliPenjual
+            // 
+            btnBeliPenjual.Location = new Point(152, 347);
+            btnBeliPenjual.Name = "btnBeliPenjual";
+            btnBeliPenjual.Size = new Size(94, 29);
+            btnBeliPenjual.TabIndex = 5;
+            btnBeliPenjual.Text = "button1";
+            btnBeliPenjual.UseVisualStyleBackColor = true;
+            // 
+            // txtCariPenjual
+            // 
+            txtCariPenjual.Location = new Point(159, 75);
+            txtCariPenjual.Name = "txtCariPenjual";
+            txtCariPenjual.Size = new Size(125, 27);
+            txtCariPenjual.TabIndex = 4;
+            // 
+            // dgvProdukPenjual
+            // 
+            dgvProdukPenjual.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProdukPenjual.Location = new Point(111, 130);
+            dgvProdukPenjual.Name = "dgvProdukPenjual";
+            dgvProdukPenjual.RowHeadersWidth = 51;
+            dgvProdukPenjual.Size = new Size(579, 188);
+            dgvProdukPenjual.TabIndex = 3;
+            // 
+            // FormEtalasePenjual
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnBeliPenjual);
+            Controls.Add(txtCariPenjual);
+            Controls.Add(dgvProdukPenjual);
+            Name = "FormEtalasePenjual";
+            Text = "FormEtalasePenjual";
+            ((System.ComponentModel.ISupportInitialize)dgvProdukPenjual).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button btnBeliPenjual;
+        private TextBox txtCariPenjual;
+        private DataGridView dgvProdukPenjual;
     }
 }

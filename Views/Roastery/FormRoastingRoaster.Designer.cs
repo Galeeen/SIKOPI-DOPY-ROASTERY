@@ -28,12 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormRoastingRoaster";
+            btnTambahtxtCariRoaster = new Button();
+            txtCariRoaster = new TextBox();
+            dgvBatchtxtCariRoaster = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvBatchtxtCariRoaster).BeginInit();
+            SuspendLayout();
+            // 
+            // btnTambahtxtCariRoaster
+            // 
+            btnTambahtxtCariRoaster.Location = new Point(84, 390);
+            btnTambahtxtCariRoaster.Name = "btnTambahtxtCariRoaster";
+            btnTambahtxtCariRoaster.Size = new Size(94, 29);
+            btnTambahtxtCariRoaster.TabIndex = 5;
+            btnTambahtxtCariRoaster.Text = "button1";
+            btnTambahtxtCariRoaster.UseVisualStyleBackColor = true;
+            // 
+            // txtCariRoaster
+            // 
+            txtCariRoaster.Location = new Point(84, 32);
+            txtCariRoaster.Name = "txtCariRoaster";
+            txtCariRoaster.Size = new Size(125, 27);
+            txtCariRoaster.TabIndex = 4;
+            // 
+            // dgvBatchtxtCariRoaster
+            // 
+            dgvBatchtxtCariRoaster.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvBatchtxtCariRoaster.Location = new Point(84, 89);
+            dgvBatchtxtCariRoaster.Name = "dgvBatchtxtCariRoaster";
+            dgvBatchtxtCariRoaster.RowHeadersWidth = 51;
+            dgvBatchtxtCariRoaster.Size = new Size(633, 286);
+            dgvBatchtxtCariRoaster.TabIndex = 3;
+            // 
+            // FormRoastingRoaster
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnTambahtxtCariRoaster);
+            Controls.Add(txtCariRoaster);
+            Controls.Add(dgvBatchtxtCariRoaster);
+            Name = "FormRoastingRoaster";
+            Text = "FormRoastingRoaster";
+            ((System.ComponentModel.ISupportInitialize)dgvBatchtxtCariRoaster).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button btnTambahtxtCariRoaster;
+        private TextBox txtCariRoaster;
+        private DataGridView dgvBatchtxtCariRoaster;
     }
 }

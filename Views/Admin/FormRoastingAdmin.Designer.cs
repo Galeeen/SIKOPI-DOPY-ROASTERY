@@ -28,12 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormRoastingAdmin";
+            dgvBatchAdmin = new DataGridView();
+            txtCariAdmin = new TextBox();
+            btnTambahBatchAdmin = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvBatchAdmin).BeginInit();
+            SuspendLayout();
+            // 
+            // dgvBatchAdmin
+            // 
+            dgvBatchAdmin.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvBatchAdmin.Location = new Point(84, 97);
+            dgvBatchAdmin.Name = "dgvBatchAdmin";
+            dgvBatchAdmin.RowHeadersWidth = 51;
+            dgvBatchAdmin.Size = new Size(633, 286);
+            dgvBatchAdmin.TabIndex = 0;
+            // 
+            // txtCariAdmin
+            // 
+            txtCariAdmin.Location = new Point(84, 40);
+            txtCariAdmin.Name = "txtCariAdmin";
+            txtCariAdmin.Size = new Size(125, 27);
+            txtCariAdmin.TabIndex = 1;
+            // 
+            // btnTambahBatchAdmin
+            // 
+            btnTambahBatchAdmin.Location = new Point(84, 398);
+            btnTambahBatchAdmin.Name = "btnTambahBatchAdmin";
+            btnTambahBatchAdmin.Size = new Size(94, 29);
+            btnTambahBatchAdmin.TabIndex = 2;
+            btnTambahBatchAdmin.Text = "button1";
+            btnTambahBatchAdmin.UseVisualStyleBackColor = true;
+            // 
+            // FormRoastingAdmin
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnTambahBatchAdmin);
+            Controls.Add(txtCariAdmin);
+            Controls.Add(dgvBatchAdmin);
+            Name = "FormRoastingAdmin";
+            Text = "FormRoastingAdmin";
+            ((System.ComponentModel.ISupportInitialize)dgvBatchAdmin).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private DataGridView dgvBatchAdmin;
+        private TextBox txtCariAdmin;
+        private Button btnTambahBatchAdmin;
     }
 }

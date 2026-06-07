@@ -14,5 +14,15 @@ namespace SIKOPI_DOPY_ROASTERY.Views.Admin
         {
             InitializeComponent();
         }
+
+        private void tabRiwayatAdmin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPergerakanStokAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
