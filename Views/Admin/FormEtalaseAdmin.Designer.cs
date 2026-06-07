@@ -37,38 +37,44 @@
             // dgvProdukAdmin
             // 
             dgvProdukAdmin.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProdukAdmin.Location = new Point(76, 162);
+            dgvProdukAdmin.Location = new Point(95, 202);
+            dgvProdukAdmin.Margin = new Padding(4, 4, 4, 4);
             dgvProdukAdmin.Name = "dgvProdukAdmin";
             dgvProdukAdmin.RowHeadersWidth = 51;
-            dgvProdukAdmin.Size = new Size(579, 188);
+            dgvProdukAdmin.Size = new Size(724, 235);
             dgvProdukAdmin.TabIndex = 0;
             // 
             // txtCariAdmin
             // 
-            txtCariAdmin.Location = new Point(124, 107);
+            txtCariAdmin.Location = new Point(155, 134);
+            txtCariAdmin.Margin = new Padding(4, 4, 4, 4);
             txtCariAdmin.Name = "txtCariAdmin";
-            txtCariAdmin.Size = new Size(125, 27);
+            txtCariAdmin.Size = new Size(155, 31);
             txtCariAdmin.TabIndex = 1;
             // 
             // btnBeliAdmin
             // 
-            btnBeliAdmin.Location = new Point(117, 379);
+            btnBeliAdmin.Location = new Point(146, 474);
+            btnBeliAdmin.Margin = new Padding(4, 4, 4, 4);
             btnBeliAdmin.Name = "btnBeliAdmin";
-            btnBeliAdmin.Size = new Size(94, 29);
+            btnBeliAdmin.Size = new Size(118, 36);
             btnBeliAdmin.TabIndex = 2;
             btnBeliAdmin.Text = "button1";
             btnBeliAdmin.UseVisualStyleBackColor = true;
             // 
             // FormEtalaseAdmin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1898, 1024);
             Controls.Add(btnBeliAdmin);
             Controls.Add(txtCariAdmin);
             Controls.Add(dgvProdukAdmin);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "FormEtalaseAdmin";
             Text = "FormEtalaseAdmin";
+            Load += FormEtalaseAdmin_Load;
             ((System.ComponentModel.ISupportInitialize)dgvProdukAdmin).EndInit();
             ResumeLayout(false);
             PerformLayout();

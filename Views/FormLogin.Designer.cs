@@ -35,36 +35,40 @@
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(181, 142);
+            txtUsername.Location = new Point(226, 178);
+            txtUsername.Margin = new Padding(4, 4, 4, 4);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(125, 27);
+            txtUsername.Size = new Size(155, 31);
             txtUsername.TabIndex = 0;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(181, 253);
+            txtPassword.Location = new Point(226, 316);
+            txtPassword.Margin = new Padding(4, 4, 4, 4);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(125, 27);
+            txtPassword.Size = new Size(155, 31);
             txtPassword.TabIndex = 1;
             // 
             // btnMasuk
             // 
-            btnMasuk.Location = new Point(195, 338);
+            btnMasuk.Location = new Point(244, 422);
+            btnMasuk.Margin = new Padding(4, 4, 4, 4);
             btnMasuk.Name = "btnMasuk";
-            btnMasuk.Size = new Size(94, 29);
+            btnMasuk.Size = new Size(118, 36);
             btnMasuk.TabIndex = 2;
             btnMasuk.Text = "button1";
             btnMasuk.UseVisualStyleBackColor = true;
             // 
             // FormLogin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1902, 1033);
+            ClientSize = new Size(1920, 1080);
             Controls.Add(btnMasuk);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "FormLogin";
             Text = "FormLogin";
             Load += FormLogin_Load;

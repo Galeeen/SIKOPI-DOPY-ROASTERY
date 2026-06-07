@@ -41,64 +41,71 @@
             // 
             // btnBatalRoaster
             // 
-            btnBatalRoaster.Location = new Point(314, 317);
+            btnBatalRoaster.Location = new Point(392, 396);
+            btnBatalRoaster.Margin = new Padding(4, 4, 4, 4);
             btnBatalRoaster.Name = "btnBatalRoaster";
-            btnBatalRoaster.Size = new Size(94, 29);
+            btnBatalRoaster.Size = new Size(118, 36);
             btnBatalRoaster.TabIndex = 13;
             btnBatalRoaster.Text = "button2";
             btnBatalRoaster.UseVisualStyleBackColor = true;
             // 
             // btnSimpanRoaster
             // 
-            btnSimpanRoaster.Location = new Point(102, 317);
+            btnSimpanRoaster.Location = new Point(128, 396);
+            btnSimpanRoaster.Margin = new Padding(4, 4, 4, 4);
             btnSimpanRoaster.Name = "btnSimpanRoaster";
-            btnSimpanRoaster.Size = new Size(94, 29);
+            btnSimpanRoaster.Size = new Size(118, 36);
             btnSimpanRoaster.TabIndex = 12;
             btnSimpanRoaster.Text = "button1";
             btnSimpanRoaster.UseVisualStyleBackColor = true;
             // 
             // numHasilGramRoaster
             // 
-            numHasilGramRoaster.Location = new Point(90, 132);
+            numHasilGramRoaster.Location = new Point(112, 165);
+            numHasilGramRoaster.Margin = new Padding(4, 4, 4, 4);
             numHasilGramRoaster.Name = "numHasilGramRoaster";
-            numHasilGramRoaster.Size = new Size(150, 27);
+            numHasilGramRoaster.Size = new Size(188, 31);
             numHasilGramRoaster.TabIndex = 11;
             // 
             // numGreenDipakaiRoaster
             // 
-            numGreenDipakaiRoaster.Location = new Point(90, 87);
+            numGreenDipakaiRoaster.Location = new Point(112, 109);
+            numGreenDipakaiRoaster.Margin = new Padding(4, 4, 4, 4);
             numGreenDipakaiRoaster.Name = "numGreenDipakaiRoaster";
-            numGreenDipakaiRoaster.Size = new Size(150, 27);
+            numGreenDipakaiRoaster.Size = new Size(188, 31);
             numGreenDipakaiRoaster.TabIndex = 10;
             // 
             // cmbLevelRoaster
             // 
             cmbLevelRoaster.FormattingEnabled = true;
-            cmbLevelRoaster.Location = new Point(89, 188);
+            cmbLevelRoaster.Location = new Point(111, 235);
+            cmbLevelRoaster.Margin = new Padding(4, 4, 4, 4);
             cmbLevelRoaster.Name = "cmbLevelRoaster";
-            cmbLevelRoaster.Size = new Size(151, 28);
+            cmbLevelRoaster.Size = new Size(188, 33);
             cmbLevelRoaster.TabIndex = 9;
             // 
             // cmbGreenBeanRoaster
             // 
             cmbGreenBeanRoaster.FormattingEnabled = true;
-            cmbGreenBeanRoaster.Location = new Point(90, 45);
+            cmbGreenBeanRoaster.Location = new Point(112, 56);
+            cmbGreenBeanRoaster.Margin = new Padding(4, 4, 4, 4);
             cmbGreenBeanRoaster.Name = "cmbGreenBeanRoaster";
-            cmbGreenBeanRoaster.Size = new Size(151, 28);
+            cmbGreenBeanRoaster.Size = new Size(188, 33);
             cmbGreenBeanRoaster.TabIndex = 14;
             // 
             // dtpTanggalRoaster
             // 
-            dtpTanggalRoaster.Location = new Point(89, 234);
+            dtpTanggalRoaster.Location = new Point(111, 292);
+            dtpTanggalRoaster.Margin = new Padding(4, 4, 4, 4);
             dtpTanggalRoaster.Name = "dtpTanggalRoaster";
-            dtpTanggalRoaster.Size = new Size(250, 27);
+            dtpTanggalRoaster.Size = new Size(312, 31);
             dtpTanggalRoaster.TabIndex = 15;
             // 
             // FormDialogBatch
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1898, 1024);
             Controls.Add(dtpTanggalRoaster);
             Controls.Add(cmbGreenBeanRoaster);
             Controls.Add(btnBatalRoaster);
@@ -106,6 +113,8 @@
             Controls.Add(numHasilGramRoaster);
             Controls.Add(numGreenDipakaiRoaster);
             Controls.Add(cmbLevelRoaster);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "FormDialogBatch";
             Text = "FormDialogBatch";
             ((System.ComponentModel.ISupportInitialize)numHasilGramRoaster).EndInit();

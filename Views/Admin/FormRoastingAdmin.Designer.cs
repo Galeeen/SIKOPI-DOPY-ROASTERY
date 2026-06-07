@@ -37,36 +37,41 @@
             // dgvBatchAdmin
             // 
             dgvBatchAdmin.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvBatchAdmin.Location = new Point(84, 97);
+            dgvBatchAdmin.Location = new Point(105, 121);
+            dgvBatchAdmin.Margin = new Padding(4, 4, 4, 4);
             dgvBatchAdmin.Name = "dgvBatchAdmin";
             dgvBatchAdmin.RowHeadersWidth = 51;
-            dgvBatchAdmin.Size = new Size(633, 286);
+            dgvBatchAdmin.Size = new Size(791, 358);
             dgvBatchAdmin.TabIndex = 0;
             // 
             // txtCariAdmin
             // 
-            txtCariAdmin.Location = new Point(84, 40);
+            txtCariAdmin.Location = new Point(105, 50);
+            txtCariAdmin.Margin = new Padding(4, 4, 4, 4);
             txtCariAdmin.Name = "txtCariAdmin";
-            txtCariAdmin.Size = new Size(125, 27);
+            txtCariAdmin.Size = new Size(155, 31);
             txtCariAdmin.TabIndex = 1;
             // 
             // btnTambahBatchAdmin
             // 
-            btnTambahBatchAdmin.Location = new Point(84, 398);
+            btnTambahBatchAdmin.Location = new Point(105, 498);
+            btnTambahBatchAdmin.Margin = new Padding(4, 4, 4, 4);
             btnTambahBatchAdmin.Name = "btnTambahBatchAdmin";
-            btnTambahBatchAdmin.Size = new Size(94, 29);
+            btnTambahBatchAdmin.Size = new Size(118, 36);
             btnTambahBatchAdmin.TabIndex = 2;
             btnTambahBatchAdmin.Text = "button1";
             btnTambahBatchAdmin.UseVisualStyleBackColor = true;
             // 
             // FormRoastingAdmin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1898, 1024);
             Controls.Add(btnTambahBatchAdmin);
             Controls.Add(txtCariAdmin);
             Controls.Add(dgvBatchAdmin);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "FormRoastingAdmin";
             Text = "FormRoastingAdmin";
             ((System.ComponentModel.ISupportInitialize)dgvBatchAdmin).EndInit();

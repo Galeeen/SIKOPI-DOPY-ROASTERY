@@ -45,44 +45,49 @@
             // 
             // txtCariPenjual
             // 
-            txtCariPenjual.Location = new Point(613, 45);
+            txtCariPenjual.Location = new Point(766, 56);
+            txtCariPenjual.Margin = new Padding(4, 4, 4, 4);
             txtCariPenjual.Name = "txtCariPenjual";
-            txtCariPenjual.Size = new Size(125, 27);
+            txtCariPenjual.Size = new Size(155, 31);
             txtCariPenjual.TabIndex = 12;
             // 
             // cmbKategoriPenjual
             // 
             cmbKategoriPenjual.FormattingEnabled = true;
-            cmbKategoriPenjual.Location = new Point(433, 45);
+            cmbKategoriPenjual.Location = new Point(541, 56);
+            cmbKategoriPenjual.Margin = new Padding(4, 4, 4, 4);
             cmbKategoriPenjual.Name = "cmbKategoriPenjual";
-            cmbKategoriPenjual.Size = new Size(151, 28);
+            cmbKategoriPenjual.Size = new Size(188, 33);
             cmbKategoriPenjual.TabIndex = 11;
             // 
             // cmbArahPenjual
             // 
             cmbArahPenjual.FormattingEnabled = true;
-            cmbArahPenjual.Location = new Point(256, 45);
+            cmbArahPenjual.Location = new Point(320, 56);
+            cmbArahPenjual.Margin = new Padding(4, 4, 4, 4);
             cmbArahPenjual.Name = "cmbArahPenjual";
-            cmbArahPenjual.Size = new Size(151, 28);
+            cmbArahPenjual.Size = new Size(188, 33);
             cmbArahPenjual.TabIndex = 10;
             // 
             // tabRiwayatPenjual
             // 
             tabRiwayatPenjual.Controls.Add(tabPergerakanStokPenjual);
             tabRiwayatPenjual.Controls.Add(tabTransaksiPenjual);
-            tabRiwayatPenjual.Location = new Point(63, 73);
+            tabRiwayatPenjual.Location = new Point(79, 91);
+            tabRiwayatPenjual.Margin = new Padding(4, 4, 4, 4);
             tabRiwayatPenjual.Name = "tabRiwayatPenjual";
             tabRiwayatPenjual.SelectedIndex = 0;
-            tabRiwayatPenjual.Size = new Size(570, 332);
+            tabRiwayatPenjual.Size = new Size(712, 415);
             tabRiwayatPenjual.TabIndex = 9;
             // 
             // tabPergerakanStokPenjual
             // 
             tabPergerakanStokPenjual.Controls.Add(dgvPergerakanPenjual);
-            tabPergerakanStokPenjual.Location = new Point(4, 29);
+            tabPergerakanStokPenjual.Location = new Point(4, 34);
+            tabPergerakanStokPenjual.Margin = new Padding(4, 4, 4, 4);
             tabPergerakanStokPenjual.Name = "tabPergerakanStokPenjual";
-            tabPergerakanStokPenjual.Padding = new Padding(3);
-            tabPergerakanStokPenjual.Size = new Size(562, 299);
+            tabPergerakanStokPenjual.Padding = new Padding(4, 4, 4, 4);
+            tabPergerakanStokPenjual.Size = new Size(704, 377);
             tabPergerakanStokPenjual.TabIndex = 0;
             tabPergerakanStokPenjual.Text = "tabPage1";
             tabPergerakanStokPenjual.UseVisualStyleBackColor = true;
@@ -90,19 +95,21 @@
             // dgvPergerakanPenjual
             // 
             dgvPergerakanPenjual.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvPergerakanPenjual.Location = new Point(26, 112);
+            dgvPergerakanPenjual.Location = new Point(32, 140);
+            dgvPergerakanPenjual.Margin = new Padding(4, 4, 4, 4);
             dgvPergerakanPenjual.Name = "dgvPergerakanPenjual";
             dgvPergerakanPenjual.RowHeadersWidth = 51;
-            dgvPergerakanPenjual.Size = new Size(509, 167);
+            dgvPergerakanPenjual.Size = new Size(636, 209);
             dgvPergerakanPenjual.TabIndex = 0;
             // 
             // tabTransaksiPenjual
             // 
             tabTransaksiPenjual.Controls.Add(dgvTransaksiPenjual);
-            tabTransaksiPenjual.Location = new Point(4, 29);
+            tabTransaksiPenjual.Location = new Point(4, 34);
+            tabTransaksiPenjual.Margin = new Padding(4, 4, 4, 4);
             tabTransaksiPenjual.Name = "tabTransaksiPenjual";
-            tabTransaksiPenjual.Padding = new Padding(3);
-            tabTransaksiPenjual.Size = new Size(562, 299);
+            tabTransaksiPenjual.Padding = new Padding(4, 4, 4, 4);
+            tabTransaksiPenjual.Size = new Size(704, 377);
             tabTransaksiPenjual.TabIndex = 1;
             tabTransaksiPenjual.Text = "tabPage2";
             tabTransaksiPenjual.UseVisualStyleBackColor = true;
@@ -110,21 +117,24 @@
             // dgvTransaksiPenjual
             // 
             dgvTransaksiPenjual.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTransaksiPenjual.Location = new Point(17, 26);
+            dgvTransaksiPenjual.Location = new Point(21, 32);
+            dgvTransaksiPenjual.Margin = new Padding(4, 4, 4, 4);
             dgvTransaksiPenjual.Name = "dgvTransaksiPenjual";
             dgvTransaksiPenjual.RowHeadersWidth = 51;
-            dgvTransaksiPenjual.Size = new Size(539, 177);
+            dgvTransaksiPenjual.Size = new Size(674, 221);
             dgvTransaksiPenjual.TabIndex = 0;
             // 
             // FormriwayatPenjual
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1898, 1024);
             Controls.Add(txtCariPenjual);
             Controls.Add(cmbKategoriPenjual);
             Controls.Add(cmbArahPenjual);
             Controls.Add(tabRiwayatPenjual);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "FormriwayatPenjual";
             Text = "FormriwayatPenjual";
             tabRiwayatPenjual.ResumeLayout(false);
