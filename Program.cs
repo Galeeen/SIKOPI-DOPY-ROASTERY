@@ -1,3 +1,5 @@
+using SIKOPI_DOPY_ROASTERY.Views;
+
 namespace SIKOPI_DOPY_ROASTERY
 {
     internal static class Program
@@ -8,10 +10,8 @@ namespace SIKOPI_DOPY_ROASTERY
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new FormLogin());   // aplikasi selalu mulai dari Login
         }
     }
 }
