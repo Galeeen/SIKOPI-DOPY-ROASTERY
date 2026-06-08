@@ -19,5 +19,35 @@ namespace SIKOPI_DOPY_ROASTERY.Views.Admin
         {
 
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FormUtamaAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvStokGreenBean_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

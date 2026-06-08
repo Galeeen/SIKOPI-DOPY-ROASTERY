@@ -24,5 +24,15 @@ namespace SIKOPI_DOPY_ROASTERY.Views.Admin
         {
 
         }
+
+        private void tabGreenAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
