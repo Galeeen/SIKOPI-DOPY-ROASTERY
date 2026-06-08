@@ -14,10 +14,11 @@ namespace SIKOPI_DOPY_ROASTERY.Controllers
         public RoastingController(RepositoriGreenBean repoGreen) { _repoGreen = repoGreen; }
 
         public void TambahBatch(long idGreen, string kodeBatch, decimal greenDipakaiKg,
-                                decimal hasilGram, string level, DateTime tanggal)
+                                decimal hasilGram, long idLevel, DateTime tanggal)
         {
             var green = _repoGreen.DapatkanById(idGreen);
             if (green == null) throw new ArgumentException("Green bean tidak ditemukan");
+            if (idLevel <= 0) throw new ArgumentException("Tingkat roasting wajib dipilih");
             if (greenDipakaiKg <= 0) throw new ArgumentException("Berat dipakai harus > 0");
             if (greenDipakaiKg > green.StokKg) throw new ArgumentException("Stok green tidak cukup");
             if (hasilGram >= greenDipakaiKg * 1000) throw new ArgumentException("Hasil harus menyusut (lossy)");
@@ -28,41 +29,40 @@ namespace SIKOPI_DOPY_ROASTERY.Controllers
             using var trx = koneksi.BeginTransaction();
             try
             {
-                // 1) simpan header batch
+                // 1) simpan header batch (roast level disimpan sebagai FK: roast_level_id)
                 var cmdBatch = new NpgsqlCommand(
-                    "INSERT INTO batch_roasting (kode_batch, id_biji_mentah, id_operator, " +
-                    "jumlah_biji_dipakai_kg, hasil_roasting_gram, tingkat_roasting, tanggal_batch) " +
-                    "VALUES (@kode,@gid,@op,@dipakai,@hasil,@level,@tgl) RETURNING id_batch", koneksi, trx);
+                    "INSERT INTO roast_batches (batch_code, green_bean_id, operator_user_id, " +
+                    "green_used_kg, roast_result_g, roast_level_id, batch_date) " +
+                    "VALUES (@kode,@gid,@op,@dipakai,@hasil,@level,@tgl) RETURNING id", koneksi, trx);
                 cmdBatch.Parameters.AddWithValue("@kode", kodeBatch);
                 cmdBatch.Parameters.AddWithValue("@gid", idGreen);
                 cmdBatch.Parameters.AddWithValue("@op", SesiAktif.PenggunaSaatIni.Id);
                 cmdBatch.Parameters.AddWithValue("@dipakai", greenDipakaiKg);
                 cmdBatch.Parameters.AddWithValue("@hasil", hasilGram);
-                cmdBatch.Parameters.AddWithValue("@level", level);
+                cmdBatch.Parameters.AddWithValue("@level", idLevel);   // 3NF: simpan id (FK), bukan teks
                 cmdBatch.Parameters.AddWithValue("@tgl", tanggal);
                 long idBatch = Convert.ToInt64(cmdBatch.ExecuteScalar());
 
                 // 2) kurangi stok green
                 var cmdKurangiGreen = new NpgsqlCommand(
-                    "UPDATE biji_kopi_mentah SET stok_kg = stok_kg - @dipakai WHERE id_biji_mentah=@id", koneksi, trx);
+                    "UPDATE green_beans SET stock_kg = stock_kg - @dipakai WHERE id=@id", koneksi, trx);
                 cmdKurangiGreen.Parameters.AddWithValue("@dipakai", greenDipakaiKg);
                 cmdKurangiGreen.Parameters.AddWithValue("@id", idGreen);
                 cmdKurangiGreen.ExecuteNonQuery();
 
-                // 3) buat SKU roast bean baru (harga 0)
+                // 3) buat SKU roast bean baru (harga 0). Roast level TIDAK disimpan di sini (diturunkan dari batch via JOIN).
                 var cmdRoast = new NpgsqlCommand(
-                    "INSERT INTO biji_kopi_roasted (id_batch, nama_produk, tingkat_roasting, stok_gram, harga_per_gram) " +
-                    "VALUES (@bid,@nama,@level,@stok,0) RETURNING id_roasted", koneksi, trx);
+                    "INSERT INTO roast_beans (batch_id, name, stock_g, price_per_g) " +
+                    "VALUES (@bid,@nama,@stok,0) RETURNING id", koneksi, trx);
                 cmdRoast.Parameters.AddWithValue("@bid", idBatch);
-                cmdRoast.Parameters.AddWithValue("@nama", $"{green.Nama} - {level}");
-                cmdRoast.Parameters.AddWithValue("@level", level);
+                cmdRoast.Parameters.AddWithValue("@nama", $"{green.Nama} (Batch {kodeBatch})");
                 cmdRoast.Parameters.AddWithValue("@stok", hasilGram);
                 long idRoast = Convert.ToInt64(cmdRoast.ExecuteScalar());
 
                 // 4) catat OUT GREEN
                 var cmdOutGreen = new NpgsqlCommand(
-                    "INSERT INTO riwayat_stok (arah,kategori,id_biji_mentah,jumlah,satuan,referensi) " +
-                    "VALUES ('KELUAR','MENTAH',@id,@jumlah,'kg',@ref)", koneksi, trx);
+                    "INSERT INTO stock_movements (direction,category,green_bean_id,qty,unit,reference) " +
+                    "VALUES ('OUT','GREEN',@id,@jumlah,'Kg',@ref)", koneksi, trx);
                 cmdOutGreen.Parameters.AddWithValue("@id", idGreen);
                 cmdOutGreen.Parameters.AddWithValue("@jumlah", greenDipakaiKg);
                 cmdOutGreen.Parameters.AddWithValue("@ref", kodeBatch);
@@ -70,8 +70,8 @@ namespace SIKOPI_DOPY_ROASTERY.Controllers
 
                 // 5) catat IN ROAST
                 var cmdInRoast = new NpgsqlCommand(
-                    "INSERT INTO riwayat_stok (arah,kategori,id_roasted,jumlah,satuan,referensi) " +
-                    "VALUES ('MASUK','ROASTED',@id,@jumlah,'gram',@ref)", koneksi, trx);
+                    "INSERT INTO stock_movements (direction,category,roast_bean_id,qty,unit,reference) " +
+                    "VALUES ('IN','ROAST',@id,@jumlah,'g',@ref)", koneksi, trx);
                 cmdInRoast.Parameters.AddWithValue("@id", idRoast);
                 cmdInRoast.Parameters.AddWithValue("@jumlah", hasilGram);
                 cmdInRoast.Parameters.AddWithValue("@ref", kodeBatch);

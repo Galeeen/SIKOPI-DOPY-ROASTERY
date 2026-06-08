@@ -12,20 +12,20 @@ namespace SIKOPI_DOPY_ROASTERY.Repositories
         {
             var daftar = new List<PergerakanStok>();
             using var koneksi = BukaKoneksi();
-            using var perintah = new NpgsqlCommand("SELECT * FROM riwayat_stok ORDER BY id_riwayat_stok DESC", koneksi);
+            using var perintah = new NpgsqlCommand("SELECT * FROM stock_movements ORDER BY id DESC", koneksi);
             using var baca = perintah.ExecuteReader();
             while (baca.Read())
             {
                 var gerak = new PergerakanStok();
-                gerak.Id = Convert.ToInt64(baca["id_riwayat_stok"]);
-                gerak.Arah = baca["arah"].ToString();
-                gerak.Kategori = baca["kategori"].ToString();
-                gerak.IdGreenBean = Convert.IsDBNull(baca["id_biji_mentah"]) ? (long?)null : Convert.ToInt64(baca["id_biji_mentah"]);
-                gerak.IdRoastBean = Convert.IsDBNull(baca["id_roasted"]) ? (long?)null : Convert.ToInt64(baca["id_roasted"]);
-                gerak.Jumlah = Convert.ToDecimal(baca["jumlah"]);
-                gerak.Satuan = baca["satuan"].ToString();
-                gerak.Referensi = Convert.IsDBNull(baca["referensi"]) ? "" : baca["referensi"].ToString();
-                gerak.TanggalGerak = Convert.ToDateTime(baca["tanggal_riwayat"]);
+                gerak.Id = Convert.ToInt64(baca["id"]);
+                gerak.Arah = baca["direction"].ToString();
+                gerak.Kategori = baca["category"].ToString();
+                gerak.IdGreenBean = Convert.IsDBNull(baca["green_bean_id"]) ? (long?)null : Convert.ToInt64(baca["green_bean_id"]);
+                gerak.IdRoastBean = Convert.IsDBNull(baca["roast_bean_id"]) ? (long?)null : Convert.ToInt64(baca["roast_bean_id"]);
+                gerak.Jumlah = Convert.ToDecimal(baca["qty"]);
+                gerak.Satuan = baca["unit"].ToString();
+                gerak.Referensi = Convert.IsDBNull(baca["reference"]) ? "" : baca["reference"].ToString();
+                gerak.TanggalGerak = Convert.ToDateTime(baca["movement_date"]);
                 daftar.Add(gerak);
             }
             return daftar;
@@ -35,8 +35,8 @@ namespace SIKOPI_DOPY_ROASTERY.Repositories
         {
             using var koneksi = BukaKoneksi();
             using var perintah = new NpgsqlCommand(
-                "INSERT INTO riwayat_stok (arah, kategori, id_biji_mentah, id_roasted, jumlah, satuan, referensi) " +
-                "VALUES (@arah,@kategori,@green,@roast,@jumlah,@satuan,@ref) RETURNING id_riwayat_stok", koneksi);
+                "INSERT INTO stock_movements (direction, category, green_bean_id, roast_bean_id, qty, unit, reference) " +
+                "VALUES (@arah,@kategori,@green,@roast,@jumlah,@satuan,@ref) RETURNING id", koneksi);
             perintah.Parameters.AddWithValue("@arah", gerak.Arah);
             perintah.Parameters.AddWithValue("@kategori", gerak.Kategori);
             // kalau kosong (null), kirim DBNull.Value ke database

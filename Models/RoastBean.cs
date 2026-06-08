@@ -7,6 +7,9 @@ namespace SIKOPI_DOPY_ROASTERY.Models
     public class RoastBean : Bahan
     {
         public long IdBatch { get; set; }
+
+        // 3NF: roast level TIDAK disimpan di roast_beans — diturunkan dari batch.
+        // Property ini hanya untuk DITAMPILKAN (diisi repo lewat JOIN roast_batches → roast_levels).
         public string RoastLevel { get; set; }
 
         private decimal _stokGram;

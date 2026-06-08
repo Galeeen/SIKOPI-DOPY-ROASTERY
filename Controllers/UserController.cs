@@ -21,8 +21,8 @@ namespace SIKOPI_DOPY_ROASTERY.Controllers
         {
             if (string.IsNullOrWhiteSpace(username)) throw new ArgumentException("Username wajib diisi");
             if (string.IsNullOrWhiteSpace(password)) throw new ArgumentException("Password wajib diisi");
-            if (peran != "admin" && peran != "produksi" && peran != "penjualan")
-                throw new ArgumentException("Peran harus admin, produksi, atau penjualan");
+            if (peran != "admin" && peran != "roaster" && peran != "penjual")
+                throw new ArgumentException("Peran harus admin, roaster, atau penjual");
 
             // cegah username kembar
             if (_repoUser.DapatkanByUsername(username) != null)
@@ -35,7 +35,7 @@ namespace SIKOPI_DOPY_ROASTERY.Controllers
         public void UbahUser(long id, string username, string password, string nama, string peran)
         {
             if (string.IsNullOrWhiteSpace(username)) throw new ArgumentException("Username wajib diisi");
-            if (peran != "admin" && peran != "produksi" && peran != "penjualan")
+            if (peran != "admin" && peran != "roaster" && peran != "penjual")
                 throw new ArgumentException("Peran tidak valid");
 
             var user = new User { Id = id, Username = username, Password = password, Nama = nama, Peran = peran };

@@ -27,11 +27,22 @@ namespace SIKOPI_DOPY_ROASTERY.Controllers
             return _repoRoast.DapatkanSemua();
         }
 
-        public void TambahGreenBean(string nama, string asal, string tipe, decimal stok, decimal harga)
+        // 3NF: jenis/metode/grade kini berupa ID (FK ke tabel lookup), bukan teks.
+        public void TambahGreenBean(string nama, string asal, long idJenis, long? idMetode, long? idGrade, decimal stok, decimal harga)
         {
             if (string.IsNullOrWhiteSpace(nama)) throw new ArgumentException("Nama wajib diisi");
+            if (idJenis <= 0) throw new ArgumentException("Jenis bean wajib dipilih");
             // Validasi stok/harga sudah otomatis oleh setter Model (Enkapsulasi)
-            var green = new GreenBean { Nama = nama, Asal = asal, Tipe = tipe, StokKg = stok, HargaPerKg = harga };
+            var green = new GreenBean
+            {
+                Nama = nama,
+                Asal = asal,
+                IdJenis = idJenis,
+                IdMetode = idMetode,
+                IdGrade = idGrade,
+                StokKg = stok,
+                HargaPerKg = harga
+            };
             long idBaru = _repoGreen.Tambah(green);
 
             // Catat pergerakan stok IN GREEN (aturan bisnis)

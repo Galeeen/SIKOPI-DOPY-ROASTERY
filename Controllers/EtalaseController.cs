@@ -35,6 +35,9 @@ namespace SIKOPI_DOPY_ROASTERY.Controllers
             if (qtyGram <= 0) throw new ArgumentException("Jumlah gram harus lebih dari 0");
             if (qtyGram > produk.StokGram) throw new ArgumentException("Stok produk tidak cukup");
 
+            // 3NF: kolom customer NOT NULL -> kalau kosong, pakai default "Umum"
+            string pelanggan = string.IsNullOrWhiteSpace(namaPelanggan) ? "Umum" : namaPelanggan.Trim();
+
             decimal hargaPerGram = produk.HargaPerGram;
             decimal total = qtyGram * hargaPerGram;
             string invoice = $"INV-{DateTime.Now:yyyyMMddHHmmss}";
@@ -47,18 +50,17 @@ namespace SIKOPI_DOPY_ROASTERY.Controllers
             {
                 // 1) simpan header penjualan
                 var cmdJual = new NpgsqlCommand(
-                    "INSERT INTO penjualan (nomor_invoice, id_karyawan_penjualan, nama_pelanggan, total_penjualan) " +
-                    "VALUES (@inv,@kasir,@pelanggan,@total) RETURNING id_penjualan", koneksi, trx);
+                    "INSERT INTO transactions (invoice, cashier_user_id, customer, total) " +
+                    "VALUES (@inv,@kasir,@pelanggan,@total) RETURNING id", koneksi, trx);
                 cmdJual.Parameters.AddWithValue("@inv", invoice);
                 cmdJual.Parameters.AddWithValue("@kasir", SesiAktif.PenggunaSaatIni.Id);
-                cmdJual.Parameters.AddWithValue("@pelanggan",
-                    string.IsNullOrWhiteSpace(namaPelanggan) ? (object)DBNull.Value : namaPelanggan);
+                cmdJual.Parameters.AddWithValue("@pelanggan", pelanggan);
                 cmdJual.Parameters.AddWithValue("@total", total);
                 long idPenjualan = Convert.ToInt64(cmdJual.ExecuteScalar());
 
                 // 2) simpan detail penjualan (1 baris item)
                 var cmdDetail = new NpgsqlCommand(
-                    "INSERT INTO detail_penjualan (id_penjualan, id_roasted, jumlah_gram, harga_per_gram, subtotal) " +
+                    "INSERT INTO transaction_items (transaction_id, roast_bean_id, qty_g, price_per_g, subtotal) " +
                     "VALUES (@jual,@roast,@qty,@harga,@subtotal)", koneksi, trx);
                 cmdDetail.Parameters.AddWithValue("@jual", idPenjualan);
                 cmdDetail.Parameters.AddWithValue("@roast", idRoast);
@@ -69,15 +71,15 @@ namespace SIKOPI_DOPY_ROASTERY.Controllers
 
                 // 3) kurangi stok roast bean
                 var cmdKurangi = new NpgsqlCommand(
-                    "UPDATE biji_kopi_roasted SET stok_gram = stok_gram - @qty WHERE id_roasted=@id", koneksi, trx);
+                    "UPDATE roast_beans SET stock_g = stock_g - @qty WHERE id=@id", koneksi, trx);
                 cmdKurangi.Parameters.AddWithValue("@qty", qtyGram);
                 cmdKurangi.Parameters.AddWithValue("@id", idRoast);
                 cmdKurangi.ExecuteNonQuery();
 
-                // 4) catat KELUAR ROASTED di riwayat stok
+                // 4) catat OUT ROAST di pergerakan stok
                 var cmdRiwayat = new NpgsqlCommand(
-                    "INSERT INTO riwayat_stok (arah,kategori,id_roasted,jumlah,satuan,referensi) " +
-                    "VALUES ('KELUAR','ROASTED',@id,@qty,'gram',@ref)", koneksi, trx);
+                    "INSERT INTO stock_movements (direction,category,roast_bean_id,qty,unit,reference) " +
+                    "VALUES ('OUT','ROAST',@id,@qty,'g',@ref)", koneksi, trx);
                 cmdRiwayat.Parameters.AddWithValue("@id", idRoast);
                 cmdRiwayat.Parameters.AddWithValue("@qty", qtyGram);
                 cmdRiwayat.Parameters.AddWithValue("@ref", invoice);

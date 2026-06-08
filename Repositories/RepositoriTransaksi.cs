@@ -12,7 +12,7 @@ namespace SIKOPI_DOPY_ROASTERY.Repositories
         {
             var daftar = new List<Transaksi>();
             using var koneksi = BukaKoneksi();
-            using var perintah = new NpgsqlCommand("SELECT * FROM penjualan ORDER BY id_penjualan DESC", koneksi);
+            using var perintah = new NpgsqlCommand("SELECT * FROM transactions ORDER BY id DESC", koneksi);
             using var baca = perintah.ExecuteReader();
             while (baca.Read())
             {
@@ -24,7 +24,7 @@ namespace SIKOPI_DOPY_ROASTERY.Repositories
         public Transaksi DapatkanById(long id)
         {
             using var koneksi = BukaKoneksi();
-            using var perintah = new NpgsqlCommand("SELECT * FROM penjualan WHERE id_penjualan=@id", koneksi);
+            using var perintah = new NpgsqlCommand("SELECT * FROM transactions WHERE id=@id", koneksi);
             perintah.Parameters.AddWithValue("@id", id);
             using var baca = perintah.ExecuteReader();
             if (!baca.Read()) return null;
@@ -35,8 +35,8 @@ namespace SIKOPI_DOPY_ROASTERY.Repositories
         {
             using var koneksi = BukaKoneksi();
             using var perintah = new NpgsqlCommand(
-                "INSERT INTO penjualan (nomor_invoice, id_karyawan_penjualan, nama_pelanggan, total_penjualan) " +
-                "VALUES (@invoice,@kasir,@pelanggan,@total) RETURNING id_penjualan", koneksi);
+                "INSERT INTO transactions (invoice, cashier_user_id, customer, total) " +
+                "VALUES (@invoice,@kasir,@pelanggan,@total) RETURNING id", koneksi);
             perintah.Parameters.AddWithValue("@invoice", t.Invoice);
             perintah.Parameters.AddWithValue("@kasir", t.IdKasir);
             perintah.Parameters.AddWithValue("@pelanggan", t.NamaPelanggan);
@@ -47,12 +47,12 @@ namespace SIKOPI_DOPY_ROASTERY.Repositories
         private Transaksi BacaTransaksi(NpgsqlDataReader baca)
         {
             var t = new Transaksi();
-            t.Id = Convert.ToInt64(baca["id_penjualan"]);
-            t.Invoice = baca["nomor_invoice"].ToString();
-            t.IdKasir = Convert.ToInt64(baca["id_karyawan_penjualan"]);
-            t.NamaPelanggan = Convert.IsDBNull(baca["nama_pelanggan"]) ? "" : baca["nama_pelanggan"].ToString();
-            t.Total = Convert.ToDecimal(baca["total_penjualan"]);
-            t.TanggalTransaksi = Convert.ToDateTime(baca["tanggal_penjualan"]);
+            t.Id = Convert.ToInt64(baca["id"]);
+            t.Invoice = baca["invoice"].ToString();
+            t.IdKasir = Convert.IsDBNull(baca["cashier_user_id"]) ? 0 : Convert.ToInt64(baca["cashier_user_id"]);
+            t.NamaPelanggan = Convert.IsDBNull(baca["customer"]) ? "" : baca["customer"].ToString();
+            t.Total = Convert.ToDecimal(baca["total"]);
+            t.TanggalTransaksi = Convert.ToDateTime(baca["tx_date"]);
             return t;
         }
     }

@@ -8,8 +8,8 @@ namespace SIKOPI_DOPY_ROASTERY.Models
     {
         public long Id { get; set; }
         public string Username { get; set; }
-        public string Password { get; set; }   // plaintext, disimpan di kolom kata_sandi_hash (tanpa hash, sesuai materi)
+        public string Password { get; set; }   // plaintext, disimpan di kolom password_hash (tanpa hash, sesuai materi)
         public string Nama { get; set; }
-        public string Peran { get; set; }   // "admin" | "produksi" | "penjualan"
+        public string Peran { get; set; }   // "admin" | "roaster" | "penjual"
     }
 }
