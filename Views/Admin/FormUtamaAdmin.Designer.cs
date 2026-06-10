@@ -38,28 +38,28 @@
             panelKontenAdmin = new Panel();
             lblSelamatDatangAdmin = new Label();
             panel1 = new Panel();
+            label14 = new Label();
+            label13 = new Label();
+            panel7 = new Panel();
             label2 = new Label();
             label1 = new Label();
             panel2 = new Panel();
             label4 = new Label();
             label3 = new Label();
             panel3 = new Panel();
-            panel4 = new Panel();
-            panel5 = new Panel();
-            panel6 = new Panel();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
             label9 = new Label();
+            label5 = new Label();
+            panel4 = new Panel();
             label10 = new Label();
+            label6 = new Label();
+            panel5 = new Panel();
             label11 = new Label();
+            label7 = new Label();
+            panel6 = new Panel();
             label12 = new Label();
+            label8 = new Label();
             dgvBatchRoasting = new DataGridView();
             dgvStokGreenBean = new DataGridView();
-            panel7 = new Panel();
-            label13 = new Label();
-            label14 = new Label();
             label15 = new Label();
             label16 = new Label();
             panel1.SuspendLayout();
@@ -100,6 +100,7 @@
             btnBahanBakuAdmin.TabIndex = 1;
             btnBahanBakuAdmin.Text = "Bahan Baku";
             btnBahanBakuAdmin.UseVisualStyleBackColor = false;
+            btnBahanBakuAdmin.Click += btnBahanBakuAdmin_Click;
             // 
             // btnRoastingAdmin
             // 
@@ -174,10 +175,19 @@
             // panelKontenAdmin
             // 
             panelKontenAdmin.BackColor = Color.White;
-            panelKontenAdmin.Location = new Point(347, 0);
+            panelKontenAdmin.Location = new Point(350, 0);
             panelKontenAdmin.Margin = new Padding(5);
             panelKontenAdmin.Name = "panelKontenAdmin";
-            panelKontenAdmin.Size = new Size(933, 100);
+            panelKontenAdmin.Size = new Size(930, 720);
+            panelKontenAdmin.Controls.Add(panel2);
+            panelKontenAdmin.Controls.Add(panel3);
+            panelKontenAdmin.Controls.Add(panel4);
+            panelKontenAdmin.Controls.Add(panel5);
+            panelKontenAdmin.Controls.Add(panel6);
+            panelKontenAdmin.Controls.Add(dgvBatchRoasting);
+            panelKontenAdmin.Controls.Add(dgvStokGreenBean);
+            panelKontenAdmin.Controls.Add(label15);
+            panelKontenAdmin.Controls.Add(label16);
             panelKontenAdmin.TabIndex = 7;
             // 
             // lblSelamatDatangAdmin
@@ -215,6 +225,40 @@
             panel1.TabIndex = 9;
             panel1.Paint += panel1_Paint;
             // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
+            label14.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label14.ForeColor = Color.White;
+            label14.Location = new Point(25, 36);
+            label14.Name = "label14";
+            label14.Size = new Size(182, 21);
+            label14.TabIndex = 13;
+            label14.Text = "Sistem Kopi Digital Dopy";
+            // 
+            // label13
+            // 
+            label13.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
+            label13.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label13.Location = new Point(25, 6);
+            label13.Name = "label13";
+            label13.Size = new Size(149, 30);
+            label13.TabIndex = 12;
+            label13.Text = "SIKOPI DOPY";
+            label13.TextAlign = ContentAlignment.TopCenter;
+            label13.Click += label13_Click;
+            // 
+            // panel7
+            // 
+            panel7.BackColor = Color.White;
+            panel7.Location = new Point(0, 67);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(350, 4);
+            panel7.TabIndex = 11;
+            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -242,7 +286,7 @@
             panel2.BackColor = Color.RoyalBlue;
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label3);
-            panel2.Location = new Point(365, 125);
+            panel2.Location = new Point(15, 125);
             panel2.Margin = new Padding(5);
             panel2.Name = "panel2";
             panel2.Size = new Size(900, 100);
@@ -273,85 +317,11 @@
             panel3.BackColor = Color.White;
             panel3.Controls.Add(label9);
             panel3.Controls.Add(label5);
-            panel3.Location = new Point(392, 250);
+            panel3.Location = new Point(42, 250);
             panel3.Name = "panel3";
             panel3.Size = new Size(160, 160);
             panel3.TabIndex = 12;
             panel3.Paint += panel3_Paint;
-            // 
-            // panel4
-            // 
-            panel4.BackColor = Color.White;
-            panel4.Controls.Add(label10);
-            panel4.Controls.Add(label6);
-            panel4.Location = new Point(604, 251);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(160, 160);
-            panel4.TabIndex = 13;
-            // 
-            // panel5
-            // 
-            panel5.BackColor = Color.White;
-            panel5.Controls.Add(label11);
-            panel5.Controls.Add(label7);
-            panel5.Location = new Point(822, 251);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(160, 160);
-            panel5.TabIndex = 14;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = Color.White;
-            panel6.Controls.Add(label12);
-            panel6.Controls.Add(label8);
-            panel6.Location = new Point(1040, 251);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(160, 160);
-            panel6.TabIndex = 15;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = Color.Black;
-            label5.Location = new Point(13, 15);
-            label5.Name = "label5";
-            label5.Size = new Size(135, 21);
-            label5.TabIndex = 0;
-            label5.Text = "Stok Green Bean";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.Black;
-            label6.Location = new Point(18, 14);
-            label6.Name = "label6";
-            label6.Size = new Size(125, 21);
-            label6.TabIndex = 1;
-            label6.Text = "Batch Bulan Ini";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.Black;
-            label7.Location = new Point(10, 14);
-            label7.Name = "label7";
-            label7.Size = new Size(132, 21);
-            label7.TabIndex = 1;
-            label7.Text = "Stok Roast Bean";
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.ForeColor = Color.Black;
-            label8.Location = new Point(23, 14);
-            label8.Name = "label8";
-            label8.Size = new Size(99, 21);
-            label8.TabIndex = 1;
-            label8.Text = "SKU Etalase";
             // 
             // label9
             // 
@@ -364,6 +334,27 @@
             label9.TabIndex = 2;
             label9.Text = "Kg Tersedia";
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.Black;
+            label5.Location = new Point(13, 15);
+            label5.Name = "label5";
+            label5.Size = new Size(135, 21);
+            label5.TabIndex = 0;
+            label5.Text = "Stok Green Bean";
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.White;
+            panel4.Controls.Add(label10);
+            panel4.Controls.Add(label6);
+            panel4.Location = new Point(254, 251);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(160, 160);
+            panel4.TabIndex = 13;
+            // 
             // label10
             // 
             label10.AutoSize = true;
@@ -374,6 +365,27 @@
             label10.Size = new Size(129, 25);
             label10.TabIndex = 3;
             label10.Text = "Batch Roasting";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.Black;
+            label6.Location = new Point(18, 14);
+            label6.Name = "label6";
+            label6.Size = new Size(125, 21);
+            label6.TabIndex = 1;
+            label6.Text = "Batch Bulan Ini";
+            // 
+            // panel5
+            // 
+            panel5.BackColor = Color.White;
+            panel5.Controls.Add(label11);
+            panel5.Controls.Add(label7);
+            panel5.Location = new Point(472, 251);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(160, 160);
+            panel5.TabIndex = 14;
             // 
             // label11
             // 
@@ -386,6 +398,27 @@
             label11.TabIndex = 3;
             label11.Text = "Kg Tersedia";
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.Black;
+            label7.Location = new Point(10, 14);
+            label7.Name = "label7";
+            label7.Size = new Size(132, 21);
+            label7.TabIndex = 1;
+            label7.Text = "Stok Roast Bean";
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.White;
+            panel6.Controls.Add(label12);
+            panel6.Controls.Add(label8);
+            panel6.Location = new Point(690, 251);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(160, 160);
+            panel6.TabIndex = 15;
+            // 
             // label12
             // 
             label12.AutoSize = true;
@@ -396,6 +429,17 @@
             label12.Size = new Size(111, 25);
             label12.TabIndex = 3;
             label12.Text = "Produk Aktif";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.Black;
+            label8.Location = new Point(23, 14);
+            label8.Name = "label8";
+            label8.Size = new Size(99, 21);
+            label8.TabIndex = 1;
+            label8.Text = "SKU Etalase";
             // 
             // dgvBatchRoasting
             // 
@@ -409,7 +453,7 @@
             dgvBatchRoasting.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvBatchRoasting.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvBatchRoasting.GridColor = Color.Gainsboro;
-            dgvBatchRoasting.Location = new Point(392, 475);
+            dgvBatchRoasting.Location = new Point(42, 475);
             dgvBatchRoasting.Name = "dgvBatchRoasting";
             dgvBatchRoasting.ReadOnly = true;
             dgvBatchRoasting.RowHeadersWidth = 62;
@@ -427,7 +471,7 @@
             dgvStokGreenBean.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvStokGreenBean.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvStokGreenBean.GridColor = Color.Gainsboro;
-            dgvStokGreenBean.Location = new Point(847, 475);
+            dgvStokGreenBean.Location = new Point(497, 475);
             dgvStokGreenBean.Name = "dgvStokGreenBean";
             dgvStokGreenBean.RowHeadersWidth = 62;
             dgvStokGreenBean.SelectionMode = DataGridViewSelectionMode.FullColumnSelect;
@@ -435,46 +479,12 @@
             dgvStokGreenBean.TabIndex = 17;
             dgvStokGreenBean.CellContentClick += dgvStokGreenBean_CellContentClick;
             // 
-            // panel7
-            // 
-            panel7.BackColor = Color.White;
-            panel7.Location = new Point(0, 67);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(350, 4);
-            panel7.TabIndex = 11;
-            // 
-            // label13
-            // 
-            label13.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label13.AutoSize = true;
-            label13.BackColor = Color.Transparent;
-            label13.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.Location = new Point(25, 6);
-            label13.Name = "label13";
-            label13.Size = new Size(149, 30);
-            label13.TabIndex = 12;
-            label13.Text = "SIKOPI DOPY";
-            label13.TextAlign = ContentAlignment.TopCenter;
-            label13.Click += label13_Click;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.BackColor = Color.Transparent;
-            label14.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label14.ForeColor = Color.White;
-            label14.Location = new Point(25, 36);
-            label14.Name = "label14";
-            label14.Size = new Size(182, 21);
-            label14.TabIndex = 13;
-            label14.Text = "Sistem Kopi Digital Dopy";
-            // 
             // label15
             // 
             label15.AutoSize = true;
             label15.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label15.ForeColor = Color.Black;
-            label15.Location = new Point(392, 440);
+            label15.Location = new Point(42, 440);
             label15.Name = "label15";
             label15.Size = new Size(211, 25);
             label15.TabIndex = 18;
@@ -485,7 +495,7 @@
             label16.AutoSize = true;
             label16.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label16.ForeColor = Color.Black;
-            label16.Location = new Point(847, 440);
+            label16.Location = new Point(497, 440);
             label16.Name = "label16";
             label16.Size = new Size(154, 25);
             label16.TabIndex = 19;
@@ -497,15 +507,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
             ClientSize = new Size(1280, 720);
-            Controls.Add(label16);
-            Controls.Add(label15);
-            Controls.Add(dgvStokGreenBean);
-            Controls.Add(dgvBatchRoasting);
-            Controls.Add(panel6);
-            Controls.Add(panel5);
-            Controls.Add(panel4);
-            Controls.Add(panel3);
-            Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(panelKontenAdmin);
             Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);

@@ -14,5 +14,10 @@ namespace SIKOPI_DOPY_ROASTERY.Views.Dialog
         {
             InitializeComponent();
         }
+
+        private void txtNamaAdmin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

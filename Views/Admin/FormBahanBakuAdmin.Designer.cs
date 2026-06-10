@@ -68,7 +68,7 @@
             // 
             // txtCariAdmin
             // 
-            txtCariAdmin.Location = new Point(482, 588);
+            txtCariAdmin.Location = new Point(132, 560);
             txtCariAdmin.Margin = new Padding(4);
             txtCariAdmin.Name = "txtCariAdmin";
             txtCariAdmin.Size = new Size(384, 31);
@@ -76,7 +76,7 @@
             // 
             // btnTambahGreenAdmin
             // 
-            btnTambahGreenAdmin.Location = new Point(1015, 602);
+            btnTambahGreenAdmin.Location = new Point(665, 560);
             btnTambahGreenAdmin.Margin = new Padding(4);
             btnTambahGreenAdmin.Name = "btnTambahGreenAdmin";
             btnTambahGreenAdmin.Size = new Size(118, 36);
@@ -86,7 +86,7 @@
             // 
             // btnEditGreenAdmin
             // 
-            btnEditGreenAdmin.Location = new Point(855, 627);
+            btnEditGreenAdmin.Location = new Point(505, 595);
             btnEditGreenAdmin.Margin = new Padding(4);
             btnEditGreenAdmin.Name = "btnEditGreenAdmin";
             btnEditGreenAdmin.Size = new Size(118, 36);
@@ -96,7 +96,7 @@
             // 
             // btnHapusGreenAdmin
             // 
-            btnHapusGreenAdmin.Location = new Point(543, 627);
+            btnHapusGreenAdmin.Location = new Point(193, 595);
             btnHapusGreenAdmin.Margin = new Padding(4);
             btnHapusGreenAdmin.Name = "btnHapusGreenAdmin";
             btnHapusGreenAdmin.Size = new Size(118, 36);
@@ -106,7 +106,7 @@
             // 
             // btnSetHargaAdmin
             // 
-            btnSetHargaAdmin.Location = new Point(690, 627);
+            btnSetHargaAdmin.Location = new Point(340, 595);
             btnSetHargaAdmin.Margin = new Padding(4);
             btnSetHargaAdmin.Name = "btnSetHargaAdmin";
             btnSetHargaAdmin.Size = new Size(118, 36);
@@ -160,10 +160,10 @@
             panel2.BackColor = Color.White;
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label3);
-            panel2.Location = new Point(366, 46);
+            panel2.Location = new Point(16, 46);
             panel2.Margin = new Padding(5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(900, 110);
+            panel2.Size = new Size(1280, 110);
             panel2.TabIndex = 20;
             panel2.Paint += panel2_Paint;
             // 
@@ -305,6 +305,7 @@
             btnBahanBakuAdmin1.TabIndex = 1;
             btnBahanBakuAdmin1.Text = "Bahan Baku";
             btnBahanBakuAdmin1.UseVisualStyleBackColor = false;
+            btnBahanBakuAdmin1.Click += btnBahanBakuAdmin1_Click;
             // 
             // btnEtalaseAdmin1
             // 
@@ -402,7 +403,7 @@
             // 
             tabBahanAdmin.Controls.Add(tabGreenAdmin);
             tabBahanAdmin.Controls.Add(tabRoastAdmin);
-            tabBahanAdmin.Location = new Point(366, 180);
+            tabBahanAdmin.Location = new Point(16, 180);
             tabBahanAdmin.Margin = new Padding(4);
             tabBahanAdmin.Name = "tabBahanAdmin";
             tabBahanAdmin.SelectedIndex = 0;
@@ -428,6 +429,7 @@
             Margin = new Padding(4);
             Name = "FormBahanBakuAdmin";
             Text = "FormBahanBakuAdmin";
+            this.Load += FormBahanBakuAdmin_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel1.ResumeLayout(false);

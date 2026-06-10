@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace SIKOPI_DOPY_ROASTERY.Views.Admin
@@ -15,24 +10,16 @@ namespace SIKOPI_DOPY_ROASTERY.Views.Admin
             InitializeComponent();
         }
 
-        private void dgvRoastAdmin_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void FormBahanBakuAdmin_Load(object sender, EventArgs e)
         {
-
+            panel1.Visible = false; // sembunyikan sidebar duplikat
         }
 
-        private void btnSetHargaAdmin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabGreenAdmin_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        private void panel2_Paint(object sender, System.Windows.Forms.PaintEventArgs e) { }
+        private void tabGreenAdmin_Click(object sender, EventArgs e) { }
+        private void dgvRoastAdmin_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
+        private void btnBahanBakuAdmin1_Click(object sender, EventArgs e) { }
     }
+
+
 }
