@@ -32,11 +32,11 @@
             txtPassword = new TextBox();
             btnMasuk = new Button();
             panel1 = new Panel();
-            label1 = new Label();
-            pictureBox1 = new PictureBox();
-            label2 = new Label();
-            label3 = new Label();
             label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            pictureBox1 = new PictureBox();
+            label1 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -69,6 +69,7 @@
             btnMasuk.TabIndex = 2;
             btnMasuk.Text = "MASUK";
             btnMasuk.UseVisualStyleBackColor = false;
+            btnMasuk.Click += btnMasuk_Click;
             // 
             // panel1
             // 
@@ -87,25 +88,23 @@
             panel1.TabIndex = 3;
             panel1.Paint += panel1_Paint;
             // 
-            // label1
+            // label4
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(110, 140);
-            label1.Name = "label1";
-            label1.Size = new Size(190, 38);
-            label1.TabIndex = 1;
-            label1.Text = "SIKOPI DOPY";
-            label1.TextAlign = ContentAlignment.TopCenter;
+            label4.AutoSize = true;
+            label4.Location = new Point(50, 310);
+            label4.Name = "label4";
+            label4.Size = new Size(87, 25);
+            label4.TabIndex = 5;
+            label4.Text = "Password";
             // 
-            // pictureBox1
+            // label3
             // 
-            pictureBox1.Location = new Point(150, 30);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 100);
-            pictureBox1.TabIndex = 2;
-            pictureBox1.TabStop = false;
+            label3.AutoSize = true;
+            label3.Location = new Point(50, 230);
+            label3.Name = "label3";
+            label3.Size = new Size(91, 25);
+            label3.TabIndex = 4;
+            label3.Text = "Username";
             // 
             // label2
             // 
@@ -117,23 +116,25 @@
             label2.TabIndex = 3;
             label2.Text = "Sistem Kopi Digital Dopy";
             // 
-            // label3
+            // pictureBox1
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(50, 230);
-            label3.Name = "label3";
-            label3.Size = new Size(91, 25);
-            label3.TabIndex = 4;
-            label3.Text = "Username";
+            pictureBox1.Location = new Point(150, 30);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 100);
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
             // 
-            // label4
+            // label1
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(50, 310);
-            label4.Name = "label4";
-            label4.Size = new Size(87, 25);
-            label4.TabIndex = 5;
-            label4.Text = "Password";
+            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(110, 140);
+            label1.Name = "label1";
+            label1.Size = new Size(190, 38);
+            label1.TabIndex = 1;
+            label1.Text = "SIKOPI DOPY";
+            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // FormLogin
             // 

@@ -23,6 +23,12 @@ namespace SIKOPI_DOPY_ROASTERY.Helpers
             }
         }
 
+        // TAMBAHKAN INI
+        public static void Masuk(User user)
+        {
+            PenggunaSaatIni = user;
+        }
+
         public static void Keluar()
         {
             PenggunaSaatIni = null;

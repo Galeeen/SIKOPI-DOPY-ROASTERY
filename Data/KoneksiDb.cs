@@ -9,6 +9,6 @@ namespace SIKOPI_DOPY_ROASTERY.Data
     {
         // Ganti PASSWORD_KAMU sesuai PostgreSQL-mu
         public static string ConnStr =
-            "Host=localhost;Port=5432;Username=postgres;Password=PASSWORD_KAMU;Database=sikopi_dopy;";
+            "Host=localhost;Port=5432;Username=postgres;Password=sql123;Database=sikopi_dopy;";
     }
 }

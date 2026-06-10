@@ -1,4 +1,5 @@
 ﻿using SIKOPI_DOPY_ROASTERY.Helpers;
+using SIKOPI_DOPY_ROASTERY.Models;
 using SIKOPI_DOPY_ROASTERY.Repositories;
 using System;
 using System.Collections.Generic;
@@ -9,15 +10,19 @@ namespace SIKOPI_DOPY_ROASTERY.Controllers
     public class AuthController
     {
         private readonly RepositoriUser _repoUser;
-        public AuthController(RepositoriUser repoUser) { _repoUser = repoUser; }  // CONSTRUCTOR injection
+        public AuthController(RepositoriUser repoUser) { _repoUser = repoUser; }
 
-        public bool Login(string username, string password)
+        public User Login(string username, string password)
         {
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+                return null;
+
             var pengguna = _repoUser.DapatkanByUsername(username);
-            if (pengguna == null) return false;
-            if (pengguna.Password != password) return false;  // bandingkan langsung (tanpa hash)
-            SesiAktif.PenggunaSaatIni = pengguna;   // simpan ke sesi
-            return true;
+
+            if (pengguna == null) return null;
+            if (pengguna.Password != password) return null;
+
+            return pengguna;
         }
     }
 }
